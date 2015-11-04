@@ -1,0 +1,230 @@
+<div style="background: #FFF;height: 100%;overflow-x: hidden;">
+  <div id="header" class="header">
+    <header>
+      <h1>样式集合-表单</h1>
+    </header>
+  </div>
+
+  <section style="padding: 5px 5px;">
+
+    <h1>Form</h1>
+    <div class="form-group">
+      <h3>横向排版</h3>
+
+      <ul class="form-item-list">
+        <li class="form-item-li form-item-li-noborder">
+          <span class="form-label split-h-label-w pull-left">公司</span>
+          <div class="form-control split-h-control-w">
+            <input class="" type="text" name="company" id="company">
+          </div>
+        </li>
+        <li class="form-item-li form-item-li-noborder">
+          <span class="form-label split-h-label-w pull-left">用户名</span>
+          <div class="form-control form-required split-h-control-w">
+            <input class="" type="text" name="username" id="username">
+          </div>
+        </li>
+        <li class="form-item-li form-item-li-noborder">
+          <span class="form-label split-h-label-w pull-left">密码</span>
+          <div class="form-control form-required split-h-control-w">
+            <input  class="" id="pwd" type="password" value="" name="pwd">
+          </div>
+        </li>
+        <li class="form-item-li form-item-li-noborder gap-v-sm">
+          <div class="form-control">
+            <span class="pull-left">
+              <label class="check"><input id="remerber" type="checkbox" checked=""><i></i><span>保存密码</span></label>
+            </span>
+            <a class="pull-right">忘记密码？</a>
+          </div>
+        </li>
+        <li class="form-item-li btn-v-group">
+          <button id="btn_enter">登录</button>
+        </li>
+      </ul>
+      <h3>代码：</h3>
+      <pre class="wscroller form-group-nospacing"><code class="language-markup sscroller">&lt;h1>横向排版&lt;/h1>
+&lt;ul class="form-item-list">
+&lt;li class="form-item-li form-item-li-noborder">
+&lt;span class="form-label split-h-label-w pull-left">公司&lt;/span>
+&lt;div class="form-control split-h-control-w">
+&lt;input class="" type="text" name="company" id="company">
+&lt;/div>
+&lt;/li>
+&lt;li class="form-item-li form-item-li-noborder">
+&lt;span class="form-label split-h-label-w pull-left">用户名&lt;/span>
+&lt;div class="form-control split-h-control-w">
+&lt;input class="" type="text" name="username" id="username">
+&lt;/div>
+&lt;/li>
+&lt;li class="form-item-li form-item-li-noborder">
+&lt;span class="form-label split-h-label-w pull-left">密码&lt;/span>
+&lt;div class="form-control split-h-control-w">
+&lt;input  class="" id="pwd" type="password" value="" name="pwd">
+&lt;/div>
+&lt;/li>
+&lt;li class="form-item-li form-item-li-noborder gap-v-sm">
+&lt;div class="form-control">
+&lt;span class="pull-left">
+&lt;label class="check">&lt;input id="remerber" type="checkbox" checked="">&lt;i>&lt;/i>&lt;span>保存密码&lt;/span>&lt;/label>
+&lt;/span>
+&lt;a class="pull-right">忘记密码？&lt;/a>
+&lt;/div>
+&lt;/li>
+&lt;li class="form-item-li btn-v-group">
+&lt;button id="btn_enter">登录&lt;/button>
+&lt;/li>
+&lt;/ul></code></pre>
+      <h3>说明：</h3>
+      <ul class="list-unordered">
+        <li>用ul,li做包裹,ul加入form-item-list样式类,li加入form-item-li（默认有下边框,如需去除需加入form-item-li-noborder样式类）</li>
+        <li>横向分布用span做标题需加入form-label,split-h-label-w,pull-left样式类，用div包含input，button需加入form-control,split-h-control-w样式类</li>
+        <li>如有必填需要，需在包含input，button的div中加form-required样式类</li>
+        <li>li之前的间距可以使用gap-v-sm,gap-v样式类做调控</li>
+        <li>按钮组自适应需在Li标签加上btn-v-group或则btn-h-group样式类</li>
+      </ul>
+
+      <h3>竖向排版</h3>
+
+      <div class="form-group">
+        <ul class="form-item-list">
+          <li class="form-item-li form-item-li-noborder">
+            <span class="form-label">公司</span>
+            <div class="form-control">
+              <input class="" type="text" name="company" id="company">
+            </div>
+          </li>
+          <li class="form-item-li form-item-li-noborder">
+            <span class="form-label">用户名</span>
+            <div class="form-control form-required">
+              <input class="" type="text" name="username" id="username">
+            </div>
+          </li>
+          <li class="form-item-li form-item-li-noborder">
+            <span class="form-label">密码</span>
+            <div class="form-control form-required">
+              <input  class="" id="pwd" type="password" value="" name="pwd">
+            </div>
+          </li>
+          <li class="form-item-li form-item-li-noborder">
+            <span class="form-label">请假事由</span>
+            <ul class="form-item-list form-group-nospacing">
+              <li class="form-item-li form-control">
+                <input class="btn-link" id="reason" type="text" value="" name="reason" placeholder="|请输入请假理由">
+              </li>
+              <li class="form-item-li form-control">
+                <button id="upload" class="btn-light-gray">上传</button>
+              </li>
+            </ul>
+          </li>
+          <li class="form-item-li form-item-li-noborder gap-v-sm">
+            <div class="form-control">
+            <span class="pull-left">
+              <label class="check"><input id="remerber" type="checkbox" checked=""><i></i><span>保存密码</span></label>
+            </span>
+              <a class="pull-right">忘记密码？</a>
+            </div>
+          </li>
+          <li class="form-item-li btn-v-group">
+            <button id="btn_enter">登录</button>
+          </li>
+        </ul>
+      </div>
+
+      <h3>代码：</h3>
+      <pre class="wscroller form-group-nospacing"><code class="language-markup sscroller">&lt;h1>竖向排版&lt;/h1>
+&lt;ul class="form-item-list">
+  &lt;li class="form-item-li form-item-li-noborder">
+    &lt;span class="form-label">公司&lt;/span>
+    &lt;div class="form-control">
+      &lt;input class="" type="text" name="company" id="company">
+    &lt;/div>
+  &lt;/li>
+  &lt;li class="form-item-li form-item-li-noborder">
+    &lt;span class="form-label">用户名&lt;/span>
+    &lt;div class="form-control form-required">
+      &lt;input class="" type="text" name="username" id="username">
+    &lt;/div>
+  &lt;/li>
+  &lt;li class="form-item-li form-item-li-noborder">
+    &lt;span class="form-label form-required">密码&lt;/span>
+    &lt;div class="form-control">
+      &lt;input  class="" id="pwd" type="password" value="" name="pwd">
+    &lt;/div>
+  &lt;/li>
+  &lt;li class="form-item-li form-item-li-noborder">
+    &lt;span class="form-label">请假事由&lt;/span>
+    &lt;ul class="form-item-list form-group-nospacing">
+      &lt;li class="form-item-li form-control">
+        &lt;input class="btn-link" id="reason" type="text" value="" name="reason" placeholder="|请输入请假理由">
+      &lt;/li>
+      &lt;li class="form-item-li form-control">
+        &lt;button id="upload" class="btn-light-gray">上传&lt;/button>
+      &lt;/li>
+    &lt;/ul>
+  &lt;/li>
+  &lt;li class="form-item-li form-item-li-noborder gap-v-sm">
+    &lt;div class="form-control">
+    &lt;span class="pull-left">
+      &lt;label class="check">&lt;input id="remerber" type="checkbox" checked="">&lt;i>&lt;/i>&lt;span>保存密码&lt;/span>&lt;/label>
+    &lt;/span>
+      &lt;a class="pull-right">忘记密码？&lt;/a>
+    &lt;/div>
+  &lt;/li>
+  &lt;li class="form-item-li btn-v-group">
+    &lt;button id="btn_enter">登录&lt;/button>
+  &lt;/li>
+&lt;/ul></code></pre>
+      <h3>说明：</h3>
+      <ul class="list-unordered">
+        <li>用ul,li做包裹,ul加入form-item-list样式类,li加入form-item-li（默认有下边框,如需去除需加入form-item-li-noborder样式类）</li>
+        <li>竖向分布用span做标题，用div包含input，button</li>
+        <li>如有必填需要，需在包含input，button的div中加form-required样式类</li>
+        <li>li之前的间距可以使用gap-v-sm,gap-v样式类做调控</li>
+        <li>按钮组自适应需在Li标签加上btn-v-group或则btn-h-group样式类</li>
+        <li>表单组合需要嵌套ul,li ul的加入form-group-nospacing样式类</li>
+      </ul>
+    </div>
+
+    <h1>Table</h1>
+    <div class="form-group">
+      <table>
+        <tr>
+          <td>4455<br>3333<br>dfdf</td>
+          <td>4455</td>
+          <td>4455</td>
+        </tr>
+        <tr>
+          <td>4455</td>
+          <td>4455</td>
+          <td>4455</td>
+        </tr>
+        <tr>
+          <td colspan="3">4455</td>
+        </tr>
+      </table>
+
+      <h3>代码：</h3>
+      <pre class="wscroller form-group-nospacing"><code class="language-markup sscroller">&lt;table>
+  &lt;tr>
+    &lt;td>4455&lt;br>3333&lt;br>dfdf&lt;/td>
+    &lt;td>4455&lt;/td>
+    &lt;td>4455&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td>4455&lt;/td>
+    &lt;td>4455&lt;/td>
+    &lt;td>4455&lt;/td>
+  &lt;/tr>
+  &lt;tr>
+    &lt;td colspan="3">4455&lt;/td>
+  &lt;/tr>
+&lt;/table></code></pre>
+    </div>
+  </section>
+</div>
+<script>
+
+  Prism.highlightAll();
+
+</script>

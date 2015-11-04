@@ -1,0 +1,50 @@
+﻿<%filter = _.removeAllSpace(filter).split(','); %>
+
+<ul class="ctui-itmes">
+    <%for(var i = 0, len = data.length; i < len; i++) { %>
+    <li data-groupindex="<%=i %>" class="<%if(typeof data[i].directUrl != 'undefined' && data[i].directUrl == true){%>ct-ui-arrow-d<%}else if(typeof data[i].directUrl != 'undefined' && data[i].directUrl == false){ %> ct-ui-no-d<% }else if(typeof data[i].needFold != 'undefined' && data[i].needFold == true){ %> ctui-arrow-close<%} else{ %> ctui-arrow-open<% } %> <%if(typeof data[i].display != 'undefined' && data[i].display == 'table'){ %> ct-ui-table<%}%>">
+        <div class="ctui-t <%if(typeof data[i].divBG!='undefined' && data[i].divBG !=''){%> <%=data[i].divBG%><%}%>">
+            <i class="icon-btn ct-ui-arrow"></i>
+            <span class="label" style="<%if(typeof data[i].style!='undefined' && data[i].style !=''){%> <%=data[i].style%> <%}%>"><%=data[i].name %></span>
+            <%if(typeof data[i].content!= 'undefined' && data[i].content !="") { %>
+            <span class="pull-right" style="padding-right:5px;<%if(typeof data[i].style!='undefined' && data[i].style !=''){%> <%=data[i].style%> <%}%>"><%=data[i].content %></span>
+            <div class="clearfix"></div>
+            <% } %>
+        </div>
+        <%if(typeof data[i].directUrl == 'undefined'&& typeof data[i].display != 'undefined' && data[i].display == 'table'){%>
+        <%var item = data[i].data; %>
+        <%if(item && item.length > 0) { %>
+        <table class="ctui-n" style="table-layout: fixed;text-align: center">
+
+            <%for(var j = 0, len1 = item.length; j < len1; j++) { %>
+            <tr>
+                <td><%=item[j].gname %></td>
+                <td><%=item[j].name %></td>
+            </tr>
+            <% } %>
+        </table>
+
+        <% } %>
+        <% }else if(!data[i].directUrl){%>
+        <%var item = data[i].data; %>
+        <%if(item && item.length > 0) { %>
+        <ul class="ctui-n">
+
+            <%for(var j = 0, len1 = item.length; j < len1; j++) { %>
+            <%if(typeof item[j].content!= 'undefined' && item[j].content !="") { %>
+            <li data-index="<%=j %>" data-group="<%=i %>" data-filter="<%for(var k in filter){ var v = filter[k]; if(typeof item[j][v]=='string') { %><%=item[j][v] %> <% } %><% } %>"><%=item[j].content %></li>
+            <% }else{%>
+            <li data-index="<%=j %>" data-group="<%=i %>" data-filter="<%for(var k in filter){ var v = filter[k]; if(typeof item[j][v]=='string') { %><%=item[j][v] %> <% } %><% } %>"><span class="label"><%=item[j].gname %></span><span class="pull-right content"><%=item[j].name %></span> <div class="clearfix"></div></li>
+
+            <% } %>
+            <% } %>
+        </ul>
+
+        <% } %>
+        <% } %>
+        <%if(typeof data[i].additionInfo!= 'undefined') { %>
+        <div><%=data[i].additionInfo %></div>
+        <% } %>
+        <% } %>
+
+</ul>

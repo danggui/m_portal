@@ -1,0 +1,58 @@
+<div id="header" class="header">
+  <header>
+    <h2>申请休假</h2>
+  </header>
+</div>
+
+<section class="holder">
+  <div>
+    <ul class="form-item-list form-group-nospacing padding-li">
+          <li class="form-item-li btn-v-group">
+            <button type="button" class="btn-light-gray" id="selectLeaveType">
+              <span class="icon-btn icon-btn-time"></span>
+              <span id="leave_type">(请选择假期类型)</span>
+            </button>
+          </li>
+    </ul>
+  </div>
+  <hr>
+  <div>
+    <ul class="form-item-list form-group-nospacing padding-li">
+      <li class="form-item-li">
+        <h2>休假时间</h2>
+      </li>
+      <li class="form-item-li form-item-li-noborder" id="selectStartDate">
+        <span class="label form-label btn-v-group"><input class="btn-link" id="input_startDate" type="text" value="" name="reason" placeholder="2011-11-11 11:11"></span>
+        <div class="form-control">
+          <button type="button" class="btn-light-gray">
+            <span class="icon-btn icon-btn-time"></span>
+            <span>开始时间</span>
+          </button>
+        </div>
+      </li>
+      <li class="form-item-li form-item-li-noborder" id="selectEndDate">
+        <span class="label form-label btn-v-group"><input class="btn-link" id="input_endDate" type="text" value="" name="reason" placeholder="2011-11-11 11:12"></span>
+        <div class="form-control">
+          <button type="button" class="btn-light-gray">
+            <span class="icon-btn icon-btn-time"></span>
+            <span>结束时间</span>
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <hr>
+  <div>
+    <ul class="form-item-list form-group-nospacing padding-li">
+      <li class="form-item-li">
+        <h2>请假事由</h2>
+      </li>
+      <li class="form-item-li form-item-li-noborder">
+        <textarea placeholder="请输入请假理由" id="txtReason"></textarea>
+      </li>
+    </ul>
+  </div>
+</section>
+<div class="holder">
+  <div class="btn-v-group"><button>确认</button></div>
+</div>

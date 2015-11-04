@@ -1,0 +1,20 @@
+<div id="header" class="header">
+  <header>
+    <h2><%=title%></h2>
+  </header>
+</div>
+
+<section class="holder">
+  <div>
+    <ul class="form-item-list form-group-nospacing padding-li">
+      <%for(var i = 0, len = data.length; i < len; i++) { %>
+        <li class="form-item-li form-item-li-noborder">
+          <span class="label"><%=data[i].gname%></span>
+          <div class="pull-right">
+            <%=data[i].name%>
+          </div>
+        </li>
+      <%}%>
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,123 @@
+<div id="header" class="header">
+  <header>
+    <h2 class="twotitle">
+      <span class="title">工作清单</span>
+      <p class="head-wrap">
+        <script type="text/template" id="total_tpl">
+          <%=total_title%>&nbsp;共<%=total%>项
+        </script>
+      </p>
+    </h2>
+    <i class="filter-icon i_bef i_right"></i>
+  </header>
+</div>
+<style>
+ .worklist .i_left {
+   padding-right:3.51em;
+ }
+
+ .worklist .i_right {
+   width: 32%;
+   float: right;
+   padding-right: .35em;
+ }
+</style>
+<section id="myworkList_wrap" style="position: absolute;width: 100%;z-index: 1;left: 0;top: 48px;bottom: 0;overflow: hidden;">
+  <div id="scroller" class="scrollerCss holder">
+    <div id="pullDown" style="display: block;text-align: center;" class=""><span class="pullDownLabel" style="width: 150px; position:relative;color:#099fde;font-size:12px;height: 21px">下拉获取最新信息</span></div>
+    <div id="scoller-wrap">
+      <script type="text/template" id="myworkList_tpl">
+    <%for(var i = 0, len = mywork_list_data.length; i < len; i++) { %>
+    <ul class="form-item-list form-group-nospacing padding-li worklist">
+      <li class="form-item-li form-item-li-noborder">
+        <ul class="form-item-list">
+          <% if(mywork_list_data[i].type ==0 || mywork_list_data[i].type ==1){%>
+            <li class="form-item-li form-item-li-noborder">
+              <span class="apply-icon"></span>
+              <span class="form-label"><i class="i_left"><%=mywork_list_data[i].apply_name%>:</i><i class="i_right"><%=mywork_list_data[i].apply_user%></i></span>
+              <span class="form-label"><i class="i_left"><%=mywork_list_data[i].apply_span%></i></span>
+              <span class="form-label"><i class="i_left"><%=mywork_list_data[i].apply_time%></i></span>
+            </li>
+          <%}else if(mywork_list_data[i].type==2 || mywork_list_data[i].type==3 || mywork_list_data[i].type==4 || mywork_list_data[i].type==5){%>
+            <li class="form-item-li form-item-li-noborder">
+              <span class="apply-icon"></span>
+              <span class="form-label"><i class="i_left"><%=mywork_list_data[i].remind_name%>:</i><i class="i_right"><%=mywork_list_data[i].remind_user%></i></span>
+              <span class="form-label"><i class="i_left"><%=mywork_list_data[i].remind_date%></i></span>
+              <span class="form-label"><i class="i_left"><%=mywork_list_data[i].remain_days%></i></span>
+            </li>
+          <%}else if(mywork_list_data[i].type==6){%>
+            <li class="form-item-li form-item-li-noborder">
+              <span class="apply-icon"></span>
+              <span class="form-label"><i class="i_left">工作时间已达到:</i><i class="i_right"><%=mywork_list_data[i].date_id%>天</i></span>
+              <span class="form-label"><i class="i_left"><%=mywork_list_data[i].date_name%></i></span>
+            </li>
+          <%}else if(mywork_list_data[i].type==7 || mywork_list_data[i].type==8){%>
+          <li class="form-item-li form-item-li-noborder">
+            <ul class="form-item-list">
+              <li class="form-item-li form-item-li-noborder">
+                <ul class="form-item-list">
+                  <li class="form-item-li form-item-li-noborder">
+                    <span class="apply-icon"></span>
+                    <span class="form-label"><i style="width: 40%;padding-right: 3.31em;"><%=mywork_list_data[i].apply_name%>:</i><i style="width: 50%;float: right;padding-right: .65em;"><%=mywork_list_data[i].apply_span%></i></span>
+                    <span class="form-label"><i style="width: 40%;padding-right: 3.31em;">申请时间:</i><%=mywork_list_data[i].apply_time%></span>
+                  </li>
+                </ul>
+              </li>
+              <li class="form-item-li form-item-li-noborder">
+                <h2>审批状态追踪</h2>
+                <ul class="form-item-list padding-li">
+                  <%for(var j = 0, lenj = mywork_list_data[i].approval.length; j < lenj; j++) { %>
+                  <li class="form-item-li">
+                    <span class="label" style="width: 90%;"><i style="width: 40%"><%=mywork_list_data[i].approval[j].position%>:</i><i><%=mywork_list_data[i].approval[j].name%>,<%=mywork_list_data[i].approval[j].state_name%>,</i><i><%=mywork_list_data[i].approval[j].app_time%></i></span>
+                    <span class="approve-icon <% if(mywork_list_data[i].approval[j].state==0){%>approve-icon-ok<%} else if(mywork_list_data[i].approval[j].state==1){%>approve-icon-reject<%} else{%>approve-icon-append<%}%>" style="right: 0;"></span>
+                  </li>
+                  <%}%>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <%}%>
+        </ul>
+      </li>
+    </ul>
+    <hr>
+    <%}%>
+    <div style="height:110px;width:100%"></div>
+  </script>
+    </div>
+  </div>
+</section>
+
+<div style="position: fixed;left: 0;bottom: 0;z-index: 100;width: 100%;" id="filterMenu" class="workMenu">
+  <div class="bottom-bar">
+    <ul class="btn-h-group">
+      <li class="flex-btn"><button id="work_todo">待办事项</button></li>
+      <li class="flex-btn"><button id="work_hint" class="flex-btn">提醒</button></li>
+    </ul>
+    <ul class="btn-h-group">
+      <li class="flex-btn"><button id="work_notify">通知</button></li>
+      <li class="flex-btn"><button id="work_all">全部</button></li>
+    </ul>
+  </div>
+</div>
+
+<div style="position: fixed;left: 0;bottom: 0;z-index: 100;width: 100%;display: none;" id="todoMenu" class="workMenu">
+  <div class="bottom-bar">
+    <ul class="btn-h-group">
+      <li class="flex-btn"><button id="all_agree" class="flex-btn">全部同意</button></li>
+      <li class="flex-btn"><button id="all_reject" class="flex-btn">全部拒绝</button></li>
+    </ul>
+  </div>
+</div>
+
+<div style="position: fixed;left: 0;bottom: 0;z-index: 100;width: 100%;display: none;" id="HintMenu" class="workMenu">
+  <div class="bottom-bar">
+    <div class="btn-v-group"><button id="all_notHint" class="flex-btn">全部不再提醒</button></div>
+  </div>
+</div>
+
+<div style="position: fixed;left: 0;bottom: 0;z-index: 100;width: 100%;display: none;" id="NotifyMenu" class="workMenu">
+  <div class="bottom-bar">
+    <div class="btn-v-group"><button id="all_notNotify" class="flex-btn">全部不再通知</button></div>
+  </div>
+</div>

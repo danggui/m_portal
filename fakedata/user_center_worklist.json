@@ -1,0 +1,33 @@
+{
+  "status": 1,
+  "message": "success",
+  "data": {
+    "news": [
+      {
+        "content": "javascript:void(0)",
+        "title": "梦幻起航——深圳机场奢侈品门店及休闲书店盛大开业",
+        "url": "images/news/3.png"
+      },
+      {
+        "content": "javascript:void(0)",
+        "title": "你好中国。",
+        "url": "images/news/3.png"
+      },
+      {
+        "content": "javascript:void(0)",
+        "title": "你好中国222fdfadfadfadfadfadfadfdfadfadfadfadfadfadfadfadfad。",
+        "url": "images/news/3.png"
+      }
+    ],
+    "worklist": {
+      "wait": "2",
+      "remind": "5",
+      "notice": "2"
+    },
+    "apply": {
+      "wait": "2",
+      "process": "2",
+      "over": "2"
+    }
+  }
+}

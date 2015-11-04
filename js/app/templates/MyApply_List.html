@@ -1,0 +1,42 @@
+<div id="header" class="header">
+  <header>
+    <h2>我的申请</h2>
+  </header>
+</div>
+<section id="myapplyList_wrap" class="wrapperCss" style="position: absolute;width: 100%;z-index: 1;left: 0;top: 48px;bottom: 0;overflow: hidden;">
+  <div id="scroller" class="scrollerCss holder">
+    <!--<div id="pullDown" style="display: block" class=""><div class="flight-loading flight-reloading"><div class="cui-i cui-w-loading"></div><div class="cui-i cui-m-logo"></div></div><span class="pullDownLabel" style="width: 150px; position:relative;top:-15px; color:#099fde;font-size:12px; ">下拉获取最新信息</span></div>-->
+    <script type="text/template" id="myapplyList_tpl">
+    <%for(var i = 0, len = myapply_list_data.length; i < len; i++) { %>
+    <ul class="form-item-list form-group-nospacing padding-li">
+      <li class="form-item-li form-item-li-noborder">
+        <ul class="form-item-list">
+          <li class="form-item-li form-item-li-noborder">
+            <span class="apply-icon"></span>
+            <span class="form-label"><i style="width: 40%;padding-right: 3.51em;"><%=myapply_list_data[i].apply_name%>:</i><%=myapply_list_data[i].apply_span%></span>
+            <span class="form-label"><i style="width: 40%;padding-right: 3.51em;">申请时间:</i><%=myapply_list_data[i].apply_time%></span>
+          </li>
+        </ul>
+      </li>
+      <li class="form-item-li form-item-li-noborder">
+        <h2>审批状态追踪</h2>
+        <ul class="form-item-list padding-li">
+          <%for(var j = 0, lenj = myapply_list_data[i].approval.length; j < lenj; j++) { %>
+            <li class="form-item-li">
+              <span class="label" style="width: 90%;"><i style="width: 40%"><%=myapply_list_data[i].approval[j].position%>:</i><i><%=myapply_list_data[i].approval[j].name%>,<%=myapply_list_data[i].approval[j].state_name%>,</i><i><%=myapply_list_data[i].approval[j].app_time%></i></span>
+              <span class="approve-icon <% if(myapply_list_data[i].approval[j].state==0){%>approve-icon-ok<%} else if(myapply_list_data[i].approval[j].state==1){%>approve-icon-reject<%} else{%>approve-icon-append<%}%>" style="right: 0;"></span>
+            </li>
+          <%}%>
+        </ul>
+      </li>
+    </ul>
+    <hr>
+    <%}%>
+    <div style="height:60px;width:100%"></div>
+  </script>
+  </div>
+</section>
+
+<div style="position: fixed;left: 0;bottom: 0;z-index: 100;width: 100%;">
+  <div class="btn-v-group holder bottom-bar"><button id="apply_leave">申请休假</button></div>
+</div>

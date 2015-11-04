@@ -1,0 +1,45 @@
+<div id="header" class="header">
+    <header>
+        <h2 id="salary-title"></h2>
+    </header>
+</div>
+
+<section class="holder">
+    <div>
+        <ul class="form-item-list form-group-nospacing padding-li">
+            <li class="form-item-li" style="display: none">
+                <h2 id="basicInfo">--</h2>
+                <div class="wrap-basic"></div>
+            </li>
+            <li class="form-item-li">
+                <div class="form-control">
+                    <button type="button" class="btn-light-gray" id="selectMonth">
+                        <span class="label"><div class="btn-link" id="input_month" type="text" value="" name="reason" placeholder="0000/00" style="text-align: center;font-size: 18px"></div></span>
+                    </button>
+                </div>
+
+                <div class="netPay-box" id="salary_total_wrap"></div>
+                <div id="pieChart" class="pieChart" style="display: none"></div>
+                <script type="text/template" id="basic_salary_tp0">
+                    <h2 style="color: #000000;font-weight: bold;display:inline;margin-right: 5px;"><%= total_salaryTitle %></h2>
+                    <h2 style="color:#ff3e3e;font-weight: bold;display:inline"><%= total_salaryVal %></h2>
+                    <span class="pie_chart" style="float: right;margin-top:-2px;display: none" id="pie_chart_btn"></span>
+                </script>
+
+            <div id="basic_salary_wrap">
+                <script type="text/template" id="basic_salary_tpl">
+                    <li class="form-item-li form-item-li-noborder">
+                        <% if(basic_salaryTitle!="NetPaySummaryInfo"){ %>
+                        <div class="title-salary <%=basic_salaryColor%>-title-salary">
+                            <h2 style="display: inline-block;margin-left: 5px;"><%= basic_salaryTitle %></h2>
+                            <span class="icon-btn ct-ui-arrow" style="background: none;float: right"></span>
+                        </div>
+                        <%}%>
+                        <div id= "<%= basic_salaryId %>" class="wrapper_salary"></div>
+                    </li>
+                </script>
+            </div>
+                <div id="aboutCDP" style="background-color:#fff8de;padding: 10px;border-radius: 2px"></div>
+        </ul>
+    </div>
+</section>

@@ -1,0 +1,49 @@
+{
+  "status": 1,
+  "message": "success",
+  "data": {
+    "info_class": [
+      {
+        "id": "0000",
+        "class": "人事异动及在职信息"
+      },
+      {
+        "id": "0005",
+        "class": "个人信息"
+      },
+      {
+        "id": "0010",
+        "class": "合同协议"
+      },
+      {
+        "id": "0025",
+        "class": "通讯"
+      },
+      {
+        "id": "0030",
+        "class": "家庭成员"
+      }
+    ],
+    "ee_info": [
+      {
+        "title": "公司",
+        "value": "中寰国际控股集团公司"
+      },
+      {
+        "title": "组织单元",
+        "value": "人力资源部"
+      },
+      {
+        "title": "职位管理",
+        "value": "薪资福利专员"
+      }
+    ],
+    "ee_card": {
+      "position": "薪资福利专员",
+      "email": "Stella.YANG@lsaspace.com",
+      "name": "杨幸",
+      "photo": "images/news/F10.png",
+      "mobile": "13774333466"
+    }
+  }
+}

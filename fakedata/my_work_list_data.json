@@ -1,0 +1,120 @@
+{
+  "status": "0/1",
+  "message": "error/success",
+  "data": [
+    {
+      "type": "0",
+      "apply_id": "1000",
+      "apply_name": "年假",
+      "apply_user": "Jackie",
+      "apply_span": "2014.8.7",
+      "apply_time": "3天前",
+      "apply_detailtime": "2014.08.5 09:00",
+      "apply_reason": "abiefw"
+    },
+    {
+      "type": "1",
+      "apply_id": "1001",
+      "apply_name": "平日加班",
+      "apply_user": "Jackie",
+      "apply_span": "2014.8.7,2小时",
+      "apply_time": "4天前",
+      "apply_detailtime": "2014.08.5 10:00",
+      "apply_reason": "abiefw"
+    },
+    {
+      "type": "2",
+      "remind_id": "1002",
+      "remind_name": "生日提醒",
+      "remind_user": "Jackie",
+      "remind_date": "1988.2.2",
+      "remain_days": "还有3天"
+    },
+    {
+      "type": "3",
+      "remind_id": "1003",
+      "remind_name": "试用期结束提醒",
+      "remind_user": "Jackie",
+      "remind_date": "1988.2.2",
+      "remain_days": "还有3天"
+    },
+    {
+      "type": "4",
+      "remind_id": "1004",
+      "remind_name": "合同到期提醒",
+      "remind_user": "Jackie",
+      "remind_date": "1988.2.2",
+      "remain_days": "还有3天"
+    },
+    {
+      "type": "5",
+      "remind_id": "1005",
+      "remind_name": "周年提醒",
+      "remind_user": "Jackie",
+      "remind_date": "1988.2.2",
+      "remain_days": "还有3天"
+    },
+    {
+      "type": "6",
+      "date_id": "1006",
+      "date_name": "2014年8月"
+    },
+    {
+      "type": "7",
+      "apply_name": "年假",
+      "apply_span": "2014.8.7,2小时",
+      "apply_time": "2014.08.26 09:00",
+      "approval":  [
+        {
+          "position": "研发部经理",
+          "name": "李四",
+          "state": "2",
+          "state_name": "已同意",
+          "opinion": "同意",
+          "mobile": "15316890391",
+          "email": "lisi@abc.com",
+          "app_time": "2014-02-08"
+        },
+        {
+          "position": "HR",
+          "name": "李曼",
+          "state": "2",
+          "state_name": "待审批",
+          "opinion": "",
+          "mobile": "15316890391",
+          "email": "lisi@abc.com",
+          "app_time": ""
+        }
+      ]
+
+    },
+    {
+      "type": "8",
+      "apply_name": "平日加班",
+      "apply_span": "2014.8.7,2小时",
+      "apply_time": "2014.08.26 09:00",
+      "approval": [
+        {
+          "position": "研发部经理",
+          "name": "李四",
+          "state": "0",
+          "state_name": "已同意",
+          "opinion": "同意",
+          "mobile": "15316890391",
+          "email": "lisi@abc.com",
+          "app_time": "2014-02-08"
+        },
+        {
+          "position": "HR",
+          "name": "李曼",
+          "state": "1",
+          "state_name": "待审批",
+          "opinion": "",
+          "mobile": "15316890391",
+          "email": "lisi@abc.com",
+          "app_time": ""
+        }
+      ]
+    }
+  ]
+}

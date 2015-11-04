@@ -1,0 +1,28 @@
+<div id="header" class="header">
+    <header>
+        <h2 id="todoDetail-title"></h2>
+    </header>
+</div>
+<section id="todoList_wrap" class="wrapperCss" style="position: absolute;width: 100%;z-index: 1;left: 0;top: 48px;bottom: 0;overflow: auto;background: rgb(221, 221, 221)">
+    <div id="scroller" class="scrollerCss holder"> </div>
+    <div style="height:4.65em;width:100%"></div>
+</section>
+<script type="text/template" id="todoList_detail_tpl">
+    <ul class="form-item-list form-group-nospacing newsList">
+        <li class="form-item-li form-item-li-nopadding" style="padding: 10px;height: 100%;">
+            <h1><span class="form-label title"><%=todo_list_data[0].applicant%></span></h1>
+            <span class="todo_content"><b class="todo_typeB todo_type_green"><%=todo_list_data[0].type%></b></span>
+            <span class="todo_content"><%=todo_list_data[0].start%>&nbsp;-&nbsp;<%=todo_list_data[0].end%></span>
+            <h1><span class="form-label title" id="todo-reason-title"></span></h1>
+            <span class="todo_content"><%=todo_list_data[0].reason%></span>
+            <span class="todo_content todo_typeI"><p id="applicationData" style="padding:0;display: inline"></p><%=todo_list_data[0].adate%></span>
+            <hr>
+            <h1><span class="form-label title" id="approvalAdvice"></span></h1>
+            <textarea style="height: 150px;" placeholder="say something ... ..." id="approvalAdvice-prompt"></textarea>
+            <div class="form-label" style="text-align: center">
+                <button id="todo-disagree" class="ApprovalResults" style="width: 100px;background: #aeafa8" value="3"></button>
+                <button id="todo-agree" class="ApprovalResults" style="width: 100px;background: #a0be28;margin-left:20px;" value="2"></button>
+            </div>
+        </li>
+    </ul>
+</script>

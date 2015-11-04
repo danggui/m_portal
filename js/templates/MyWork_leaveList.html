@@ -1,0 +1,37 @@
+<div id="header" class="header">
+    <header>
+        <h2 id="leavelist-title"></h2>
+    </header>
+</div>
+<section id="todoList_wrap" class="wrapperCss" style="position: absolute;width: 100%;z-index: 1;left: 0;top: 48px;bottom: 0;overflow: auto;background: rgb(221, 221, 221)">
+    <div id="scroller" class="scrollerCss holder leaveListTitleBg">
+        <div id="annualLeaveQuota"></div>
+
+        <div id="leaveList"></div>
+    </div>
+    <div style="height:4.65em;width:100%"></div>
+</section>
+<script type="text/template" id="leaveList_tp0">
+    <div style="width: 60%">
+        <span class="todo_content leaveListTitleFontAlign" style="margin: 10px 0;"><h2 class="myLeaveStatus"></h2></span>
+        <span class="todo_content leaveListTitleFontAlign"><b><%= annual_Leave_data[0].type %></b></span>
+        <span class="todo_content todo_typeI leaveListTitleFontAlign" style="color: black"><e id="expirationDate"></e> <%= annual_Leave_data[0].end %> </span>
+        <span class="todo_content leaveListTitleFontAlign"><b class="leaveListTitleFontB"><%= parseInt(annual_Leave_data[0].remainingDays) %></b> <e class="leaveListTitleFontB" style="font-size: 0.8rem" id="daysLeft"></e></span>
+    </div>
+    <button class="leaveApplyButton" id="leaveApplyButton"></button>
+</script>
+<script type="text/template" id="leaveList_tpl">
+    <%for(var i = 0, len = leave_list_data.length; i < len; i++) { %>
+    <ul class="form-item-list form-group-nospacing newsList" todo-id="<%=leave_list_data[i].id%>">
+        <li class="form-item-li form-item-li-nopadding" style="padding:10px;height: 7.5rem;">
+
+            <div style="width:100%;float: left">
+                <h2><span class="form-label title"><%=leave_list_data[i].type%></span></h2>
+                <span class="todo_content" style="font-size: 0.8rem"><%=leave_list_data[i].start%>&nbsp;-&nbsp;<%=leave_list_data[i].end%>&nbsp;&nbsp;|&nbsp;&nbsp;<%=leave_list_data[i].days%><e class="days"></e></span>
+                <span class="todo_content todo_typeI"><p class="applicationData" style="padding:0;display: inline"></p><%=leave_list_data[i].dateApplicant%></span>
+                <span class="todo_content" style="font-size: 0.8rem"><p class="<% if(leave_list_data[i].statusType=='3'||leave_list_data[i].statusType=='9'){ %> leave_status_approved <%}else{%> leave_status_approved_GRAY <%}%>"><%=leave_list_data[i].status%></p></span>
+            </div>
+        </li>
+    </ul>
+    <%}%>
+</script>

@@ -1,0 +1,20 @@
+<div class="tree-side-nav">
+  <%for(var i = 0, len = data.length; i < len; i++) { %>
+  <%var item = data[i].children; %>
+  <div class="side-menu-list">
+    <div class="trigger" target="<%=data[i].url%>" >
+      <span class="slide-icon sd_<%=data[i].id%>"></span><span><%=data[i].text%></span>
+    </div>
+    <%if(item && item.length > 0) { %>
+    <ul style="display: none;">
+      <%for(var j = 0, len1 = item.length; j < len1; j++) { %>
+      <li data-leaf-id='<%=item[j].id%>' class="triggerLeaf" target="<%=item[j].url%>">
+        <span class="slide-icon sd_<%=item[j].id%>"></span><span><%= item[j].text%></span>
+      </li>
+      <% } %>
+    </ul>
+    <% } %>
+  </div>
+  <% } %>
+</div>
+

@@ -1,0 +1,73 @@
+{
+  "message": "success",
+  "status": "1",
+  "data": {
+    "user_info": {
+      "role_id": "0",
+      "po_id": 3143,
+      "ou_name": "人力资源部",
+      "ee_head": "images/news/F10.png",
+      "ee_name": "杨幸",
+      "ou_id": 2582,
+      "sip": 101,
+      "ee_id": 3723,
+      "email": "Stella.YANG@lsaspace.com",
+      "user_id": 190,
+      "po_name": "薪资福利专员",
+      "client_name": null,
+      "mobile": ""
+    },
+    "menu_info": [
+      {
+        "app_resource_code": "01",
+        "describe_en_us": "My Personnel Info",
+        "describe_zh_cn": "我的信息"
+      },
+      {
+        "app_resource_code": "02",
+        "describe_en_us": "My Payslip",
+        "describe_zh_cn": "我的工资单"
+      },
+      {
+        "app_resource_code": "03",
+        "describe_en_us": "我的工作日历",
+        "describe_zh_cn": "我的工作日历"
+      },
+      {
+        "app_resource_code": "04",
+        "describe_en_us": "我的休假",
+        "describe_zh_cn": "我的休假"
+      },
+      {
+        "app_resource_code": "05",
+        "describe_en_us": "我的加班",
+        "describe_zh_cn": "我的加班"
+      },
+      {
+        "app_resource_code": "06",
+        "describe_en_us": "My Request",
+        "describe_zh_cn": "我的申请"
+      },
+      {
+        "app_resource_code": "07",
+        "describe_en_us": "Work Feed",
+        "describe_zh_cn": "工作清单"
+      },
+      {
+        "app_resource_code": "08",
+        "describe_en_us": "My Team",
+        "describe_zh_cn": "我的团队"
+      },
+      {
+        "app_resource_code": "09",
+        "describe_en_us": "团队日历",
+        "describe_zh_cn": "团队日历"
+      },
+      {
+        "app_resource_code": "10",
+        "describe_en_us": "Company Policy Procedures",
+        "describe_zh_cn": "公司政策"
+      }
+    ]
+  }
+}

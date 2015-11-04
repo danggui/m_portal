@@ -1,0 +1,31 @@
+<div id="header" class="header">
+    <header>
+        <h2 id="myinfo-edit-title"></h2>
+        <i id="myinfo-save" class="i_bef i_right" style="width: 60px;"><h2></h2></i>
+    </header>
+</div>
+<section class="holder" style="background: white">
+    <div class="form-group form-group-myinfo" id="myinfo_phone_wrap" style="display: flex;justify-content: center;"></div>
+    <ul class="ctui-itmes">
+        <div class="ctui-t">
+            <span class="label" id="myinfo-edit-sub-title" style=""></span>
+        </div>
+    </ul>
+    <div id="myinfo_edit_wrap"></div>
+</section>
+<script type="text/template" id="photo_edit_tp0">
+    <img id="headPortrait" src="<%=photoData.value%>" width="120px" height="120px" style="vertical-align: middle;margin:5px;-moz-border-radius: 60px;-webkit-border-radius:60px;">
+</script>
+<script type="text/template" id="myinfo_edit_tpl">
+    <ul class="form-item-list form-group-nospacing padding-li">
+        <%for(var i = 0, len = data.length; i < len; i++) { %>
+        <li class="form-item-li" data-id="<%=data[i].code%>" style="float: left;width: 100%;">
+            <img src="./images/icons/right_arrow.png" width="10px" height="15px" style="float: right;margin:3px 0 3px 10px;">
+            <span class="label"><b style="color: black"><%=data[i].name%></b></span>
+            <div class="pull-right" style="">
+                <%=data[i].value%>
+            </div>
+        </li>
+        <%}%>
+    </ul>
+</script>

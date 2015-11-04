@@ -1,0 +1,197 @@
+/**
+ * - Text
+ * - Link
+ * - Heading
+ * - List
+ * - Code
+ * - Label & Number
+ * - Highlight
+ * - Image
+ */
+
+
+/**
+ * Text
+ */
+
+body,button,input,select,textarea {
+  color: @color-text;
+  font:@font-weight @font-base/@line-base @font-family;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+blockquote,
+pre {
+  &:extend(.gap-v all);
+}
+
+p {
+  text-align: justify;
+  padding-top: 0.67em;
+  padding-right: 0.6em;
+}
+
+blockquote {
+  margin-left: @gap-v-sm;
+  margin-right: @gap-v-sm;
+  padding: 0 @gap-v-tiny;
+}
+
+hr {
+  border-color: @color-hr;
+  border-style: solid;
+  border-width: 1px 0 0;
+  margin: @gap-v-sm 0;
+}
+
+i{
+  font-style: normal;
+}
+
+// ----- Text end ----- //
+
+
+/**
+ * Link
+ */
+
+a {
+  outline: 0;
+  text-decoration: none;
+}
+
+// ----- Link end ----- //
+
+
+/**
+ * Heading
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: @h-font-weight;
+  line-height: 1;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: @h1-size;
+}
+
+h2 {
+  font-size: @h2-size;
+}
+
+h3 {
+  font-size: @h3-size;
+}
+
+// ----- Heading end ----- //
+
+
+/**
+ * List
+ */
+
+ol,
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: list-item;
+
+}
+
+.list-ordered {
+  list-style-type: decimal;
+  padding-left: @gap-h-lg;
+
+  .list-ordered {
+    list-style-type: lower-alpha;
+  }
+}
+
+.list-unordered {
+  list-style-type: disc;
+  padding-left: @gap-h-lg;
+
+  .list-unordered {
+    list-style-type: circle;
+
+    .list-unordered {
+      list-style-type: square;
+    }
+  }
+}
+
+// ----- List end ----- //
+
+/**
+ * Code
+ */
+code {
+  padding: 0 @gap-h-tiny;
+  white-space: nowrap;
+}
+
+// ----- Code end ----- //
+
+/**
+ * Label & Number
+ */
+
+.label,
+.num {
+  color: @label-color;
+  .inline-block();
+}
+
+.num {
+  font-size: @font-sm;
+  color: @color-white;
+  background-color: @number-bg;
+  border: @number-border-width solid @number-border-color;
+  border-radius: (@line-base / 2);
+  box-shadow: @number-shadow;
+  font-weight: 700;
+  line-height: (@line-base - @number-border-width * 2);
+  min-width: (@line-base - @number-border-width * 2);
+  padding: 0;
+  text-align: center;
+}
+
+// ----- Label & Number end ----- //
+
+/**
+ * Highlight
+ */
+
+.highlight {
+  background-color: @color-highlight-bg;
+  color: @color-highlight;
+}
+
+// ----- Highlight end ----- //
+
+/**
+ * Image
+ */
+
+img {
+  max-width: 100%;
+}
+
+// ----- Image end ----- //

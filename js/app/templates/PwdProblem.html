@@ -1,0 +1,38 @@
+<div id="searchPassword-box">
+    <script type="text/template" id="searchPassword">
+<div id="header" class="header">
+  <header>
+    <h2><%=lanStore.passwordRecovery %></h2>
+  </header>
+</div>
+
+<section class="holder">
+    <ul class="form-item-list form-group">
+        <li class="form-item-li form-item-li-noborder">
+          <div class="form-control"><input type="text" id="PwdCompany" placeholder="<%=lanStore.company %>" style="line-height: 18px;"></div>
+        </li>
+        <li class="form-item-li form-item-li-noborder">
+          <div class="form-control"><input type="text" id="PwdUser" placeholder="<%=lanStore.username %>" style="line-height: 18px;"></div>
+        </li>
+        <li class="form-item-li form-item-li-noborder">
+            <div class="form-control">
+                <button type="button" class="btn-light-gray" id="selectQuestion" style="text-align: left">
+                    <span class="icon-btn icon-btn-select"></span>
+                    <span id="input_answer"><%=lanStore.SelectQuestion %></span>
+                </button>
+            </div>
+        </li>
+        <li class="form-item-li form-item-li-noborder">
+            <div class="form-control"><input type="text" id="PwdAnswer" placeholder="<%=lanStore.SelectionAnswer %>" style="line-height: 18px;"></div>
+        </li>
+    </ul>
+
+    <div class="gap-v">
+      <h2><%=lanStore.searchPasswordTips %></h2>
+    </div>
+    <ul id="operate" class="btn-h-group">
+      <li class="flex-btn"><button id="enterOK"><%=lanStore.confirm %></button></li>
+    </ul>
+</section>
+</script>
+</div>

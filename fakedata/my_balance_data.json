@@ -1,0 +1,52 @@
+{
+  "status": "0/1",
+  "message": "error/success",
+  "data": {
+    "remain_leaves": [
+      {
+        "type": "1000",
+        "name": "年假",
+        "surplus": "2天",
+        "expiry": "2014-12-31"
+      },
+      {
+        "type": "1002",
+        "name": "调休",
+        "surplus": "5天",
+        "expiry": "2014-12-1"
+      }
+    ],
+    "finish_leaves": [
+      {
+        "type": "1000",
+        "name": "年假",
+        "span": "3天"
+      },
+      {
+        "type": "1001",
+        "name": "病假",
+        "span": "3天"
+      },
+      {
+        "type": "1002",
+        "name": "事假",
+        "span": "3天"
+      },
+      {
+        "type": "1003",
+        "name": "年假",
+        "span": "3天"
+      }
+    ],
+    "unclose_leaves": [
+      {
+        "pk_id": "a800",
+        "type": "0",
+        "name": "调休",
+        "apply_time": "3天前",
+        "state_type": "1/2",
+        "state_name": "待审批/待提交"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+﻿<div class="pop-box">
+  <div class="pop-box-hd">
+    <%=title %>
+  </div>
+  <div class="pop-box-bd" style="overflow: hidden; position: relative;">
+    <ul class="form-item-list" style="position: absolute; width: 100%; ">
+      <%for(var i = 0, len = data.length; i < len; i++) { %>
+        <li data-index="<%=i %>" <%if(i == index){%>class="form-item-li current"<%}else{%>class="form-item-li"<%} %> ><%=data[i].name || data[i].id %></li>
+      <% } %>
+    </ul>
+  </div>
+</div>

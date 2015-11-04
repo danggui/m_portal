@@ -1,0 +1,88 @@
+﻿<div style="background: #FFF;height: 100%;overflow-x: hidden;">
+
+  <div id="header" class="header">
+    <header>
+      <h1>alert-控件</h1>
+    </header>
+  </div>
+
+  <section style="padding: 5px 5px;">
+    <div class="form-group">
+      <h3>基本参数说明</h3>
+      <pre class="wscroller form-group-nospacing"><code class="language-markup sscroller">@param title        {String}    标题
+@param content      {String}    内容
+@param buttons      {array}     需要生成的按钮
+@param template     {String}    模板视图文本
+@param events       {Object}    绑定事件
+@param setDatamodel {Object}    动态设置属性、事件</code></pre>
+
+      <h3>demo1</h3>
+      <div class="btn-v-group"><button class="demo1 btn">简单使用</button></div>
+      <pre class="wscroller form-group-nospacing"><code class="language-markup sscroller">if (!this.alert1) {
+this.alert1 = new UIAlert();
+}
+this.alert1.animateShow();</code></pre>
+
+      <h3>demo2</h3>
+      <div class="btn-v-group"><button class="demo2 btn">简单使用2</button></div>
+        <pre class="wscroller form-group-nospacing"><code class="language-markup sscroller">if (!this.alert2) {
+this.alert2 = new UIAlert({
+datamodel: {
+title: 'demo01',
+content: 'content01'
+},
+okAction: function () {
+alert('ok');
+this.hide();
+},
+cancelAction: function () {
+alert('cancel');
+this.hide();
+}
+});
+}
+this.alert2.show();</code></pre>
+
+      <h3>demo3</h3>
+      <div class="btn-v-group"><button class="demo3 btn">简单使用3-三按钮和内容自定义</button></div>
+        <pre class="wscroller form-group-nospacing"><code class="language-markup sscroller">if (!this.alert3) {
+this.alert3 = new UIAlert({
+datamodel: {
+title: 'demo02',
+content: 'content02',
+btns: [
+{ name: '2', className: 'ct-ui-btns-ok' },
+{ name: '22', className: 'ct-ui-btns-no' },
+{ name: '222', className: 'ct-ui-btns-unknown' }
+]
+},
+events: {
+'click .ct-ui-btns-ok': 'okAction',
+'click .ct-ui-btns-no': 'noAction',
+'click .ct-ui-btns-unknown': 'unknownAction'
+},
+okAction: function () {
+alert('2');
+this.hide();
+},
+noAction: function () {
+alert('22');
+this.hide();
+},
+unknownAction: function () {
+alert('222');
+this.hide();
+}
+});
+}
+this.alert3.show();</code></pre>
+      </div>
+  </section>
+
+</div>
+<script>
+
+  Prism.highlightAll();
+
+</script>
+

@@ -1,0 +1,179 @@
+/**
+ * - Body
+ * - main Container
+ * - View Header
+ * - View Content
+ * - View Footer
+ */
+
+
+/**
+ * Body
+ */
+html, body, .h100, #main {
+  height: 100%;
+  background: @color-body-bg;
+}
+
+body {
+  min-width: @mq-mobile-ssm;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-font-smoothing: antialiased;
+  -moz-user-select: none;
+  color: #000;
+}
+// ----- Body end ----- //
+
+/**
+ * main Container
+ */
+.h100{
+  .main-viewport{
+    position: relative;
+    height: 100%;
+    .sub-viewport{
+      overflow-x: hidden;
+      min-height: 100%;
+    }
+  }
+}
+// -----main Container end ----- //
+
+
+/**
+ * View Header
+ */
+.logo {
+  width: 100%;
+  margin:0 auto;
+  margin-top: @logo-margin-top;
+  text-align: center;
+}
+
+.header{
+  height: @header-height;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: @header-height;
+  background-color: @color-primary;
+
+  .box-shadow(0 2px 2px 0 rgba(0, 0, 0, 0.3));
+
+  .header &{
+    z-index: 2000;
+  }
+
+  h1 {
+    position: absolute;
+    width: 100%;
+    line-height: @header-height/2;
+    text-align: center;
+    letter-spacing: 0px;
+    color: @color-header-text;
+    top:17px;
+  }
+
+  h2 {
+    position: absolute;
+    width: 100%;
+    line-height: @header-height;
+    text-align: center;
+    letter-spacing: 1px;
+    color: @color-header-text;
+    top:7px;
+  }
+
+  i {
+    position: absolute;
+    top: 0;
+    height: @header-height
+  }
+}
+
+.ct-h-position{
+  position: relative;
+}
+// ----- View Header end ----- //
+
+
+/**
+ * View Content
+ */
+
+.view-content {
+  margin: 0 auto;
+  padding: 0px @gap-h;
+  overflow: hidden;
+}
+
+// ----- View Content end ----- //
+
+
+
+/**
+ * View Footer
+ */
+
+.view-footer {
+
+}
+
+// ----- View Footer end ----- //
+
+/**
+ * View scroller
+ */
+.wrapperCss {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.scrollerCss {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+// ----- View scroller end ----- //
+
+/**
+ * For small screen
+ */
+
+@media only screen and (max-width: @mq-mobile) and (min-width: @mq-mobile-sm){
+  .sub-viewport {
+    max-width: @mq-mobile;
+  }
+}
+
+@media only screen and (max-width: @mq-pad-width) and (min-width: @mq-mobile){
+  .sub-viewport {
+    max-width: @mq-pad-width;
+  }
+  body,button, input, select, textarea{
+    font-size: 0.8rem!important;
+  }
+}
+
+@media only screen and (max-width: @mq-mobile-sm) and (min-width: @mq-mobile-esm){
+  .sub-viewport {
+    max-width: @mq-mobile-sm;
+  }
+}
+
+@media only screen and (max-width: @mq-mobile-esm) and (min-width: @mq-mobile-ssm) {
+  .sub-viewport {
+    max-width: @mq-mobile-esm;
+  }
+}
+
+// ----- For small screen end ----- //

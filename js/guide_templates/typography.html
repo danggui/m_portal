@@ -1,0 +1,115 @@
+<div style="background: #FFF;height: 100%;overflow-x: hidden;">
+
+<div id="header" class="header">
+  <header>
+    <h1>样式集合-文本</h1>
+  </header>
+</div>
+
+<section style="padding: 5px 5px;">
+<h1>文本</h1>
+<h1>标题</h1>
+
+<div class="form-group">
+  <h3>标题显示效果</h3>
+  <h1>标题1</h1>
+  <h2>标题2</h2>
+  <h3>标题3</h3>
+  <hr>
+  <h3>代码：</h3>
+  <pre><code class="language-markup">&lt;h1>标题 1&lt;/h1>
+&lt;h2>标题 2&lt;/h2>
+&lt;h3>标题 3&lt;/h3></code></pre>
+</div>
+
+<h1>段落</h1>
+<div class="form-group">
+  <h3>显示效果</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet blanditiis commodi, delectus dicta dolorum eos eum explicabo iusto libero, maxime nam necessitatibus placeat quaerat sit temporibus, unde vel voluptatum!</p>
+    <p>Commodi inventore ipsa quo tempore? Assumenda commodi consectetur cum debitis deleniti doloremque facilis fugit ipsa, iste non nostrum officiis provident quas qui quia quibusdam saepe soluta vero vitae voluptatem voluptatibus.</p>
+  <hr>
+  <h3>代码：</h3>
+  <pre><code class="language-markup">&lt;p>段落文本内容&lt;/p></code></pre>
+</div>
+
+<h1>引用</h1>
+<div class="form-group">
+  <h3>显示效果</h3>
+    <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet blanditiis commodi, delectus dicta dolorum eos eum explicabo iusto libero, maxime nam necessitatibus placeat quaerat sit temporibus, unde vel voluptatum!</p></blockquote>
+    <blockquote><p>Commodi inventore ipsa quo tempore? Assumenda commodi consectetur cum debitis deleniti doloremque facilis fugit ipsa, iste non nostrum officiis provident quas qui quia quibusdam saepe soluta vero vitae voluptatem voluptatibus.</p></blockquote>
+  <hr>
+  <h3>代码：</h3>
+  <pre><code class="language-markup">&lt;blockquote>引用内容&lt;/blockquote></code></pre>
+  <h3>说明：</h3>
+  <ul class="list-ordered">
+    <li>引用站外元素，可以用 blockquote</li>
+    <li>为了保持段落之间的节奏感，blockquote 内部的元素也用 p 包起来</li>
+  </ul>
+</div>
+
+<h1>列表</h1>
+<div class="form-group">
+  <h3>显示效果</h3>
+  <ul class="list-unordered">
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, tempore.</li>
+    <li>Explicabo in reiciendis soluta. Dignissimos et hic nihil quidem sunt?</li>
+    <li>Consequatur ducimus repellat sed sit. Labore nam quas repudiandae sequi.</li>
+  </ul>
+
+  <ol class="list-ordered">
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, perferendis.</li>
+    <li>Deserunt ea et explicabo nesciunt reiciendis. Aliquam dolore excepturi rem!</li>
+    <li>Accusantium ad aperiam dicta ea facilis laudantium officia quaerat rem.</li>
+  </ol>
+  <hr>
+  <h3>代码：</h3>
+  <pre><code class="language-markup">&lt;ul class="list-unordered">
+&lt;li>无序列表项&lt;/li>
+&lt;/ul>
+
+&lt;ol class="list-ordered">
+&lt;li>有序列表项&lt;/li>
+&lt;/ol></code></pre>
+  <h3>说明：</h3>
+  <ul class="list-unordered">
+    <li>默认的 <code>ol</code>、<code>ul</code> 样式都已经被清除，因为在实际应用中它们更多被用于导航和菜单。</li>
+    <li>无序列表样式：<code>.list-unordered</code>。</li>
+    <li>有序列表样式：<code>.list-ordered</code>。</li>
+  </ul>
+</div>
+
+<h1>行内文字</h1>
+<div class="form-group">
+  <h3>显示效果</h3>
+  <div class="gap-v">
+    <p><a href="javascript:void(0);">链接</a></p>
+    <p><strong>加粗</strong></p>
+    <p><em>Italics</em></p>
+    <p><span class="label">标签</span> 普通文字</p>
+    <p><span class="num">9</span> 普通文字</p>
+    <p><span class="highlight">高亮</span> 普通文字</p>
+  </div>
+  <hr>
+  <h3>代码：</h3>
+  <pre><code class="language-markup">&lt;a href="javascript:void(0)">l&lt;/a>
+&lt;strong>加粗&lt;/strong>
+&lt;em>Italics&lt;/em>
+&lt;span class="label">标签&lt;/span>
+&lt;span class="num">9&lt;/span>
+&lt;span class="highlight">高亮&lt;/span></code></pre>
+  <h3>说明：</h3>
+  <ul class="list-unordered">
+    <li>不指向具体链接的 <code>a</code> 元素 <code>href</code> 写法是 <code>href="javascript:void(0);"</code>。不要写 <code>href="#"</code>，会影响 <code>location.hash</code> 的变化。</li>
+    <li>中文非标题尽量不要加粗，有点丑，需要特殊显示的文字用 <code>span</code> 加样式区分。</li>
+    <li>中文禁止倾斜，丑得不能忍。</li>
+    <li>标签样式：<code>span.label</code>。</li>
+    <li>高亮样式：<code>span.highlight</code>。</li>
+  </ul>
+</div>
+</section>
+</div>
+<script>
+
+  Prism.highlightAll();
+
+</script>

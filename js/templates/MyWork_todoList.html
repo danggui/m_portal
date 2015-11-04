@@ -1,0 +1,25 @@
+<div id="header" class="header">
+    <header>
+        <h2 id="todolist-title"></h2>
+    </header>
+</div>
+<section id="todoList_wrap" class="wrapperCss" style="position: absolute;width: 100%;z-index: 1;left: 0;top: 48px;bottom: 0;overflow: auto;background: rgb(221, 221, 221)">
+    <div id="scroller" class="scrollerCss holder"></div>
+    <div style="height:4.65em;width:100%"></div>
+</section>
+<script type="text/template" id="todoList_tpl">
+    <%for(var i = 0, len = todo_list_data.length; i < len; i++) { %>
+    <ul class="form-item-list form-group-nospacing newsList" todo-id="<%=todo_list_data[i].id%>">
+        <li class="form-item-li form-item-li-nopadding" style="padding: 10px 0 0 10px;">
+
+            <div style="width:90%;float: left">
+                <h1><span class="form-label title"><%=todo_list_data[i].applicant%></span></h1>
+                <span class="todo_content"><b class="todo_typeB todo_type_green"><%=todo_list_data[i].type%></b></span>
+                <span class="todo_content todo_typeI"><p class="applicationData" style="padding:0;display: inline"><%= todo_list_data[i].ApplicationDate %></p><%=todo_list_data[i].adate%></span>
+            </div>
+            <div class="todo_rightArrow"></div>
+
+        </li>
+    </ul>
+    <%}%>
+</script>

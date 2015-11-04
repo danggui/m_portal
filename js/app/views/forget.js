@@ -1,0 +1,1 @@
+define(["View",getViewTemplatePath("forget")],function(a,b){return _.inherit(a,{onCreate:function(){this.$el.html(b)},events:{"touchstart #confirm":"OnConfirm","touchstart #contact":"contact"},OnConfirm:function(){},contact:function(){this.forward("contactUs")},onPreShow:function(){this.turning()},onShow:function(){},onHide:function(){}})});

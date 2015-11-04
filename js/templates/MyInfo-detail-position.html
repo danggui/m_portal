@@ -1,0 +1,26 @@
+<div id="header" class="header">
+  <header>
+    <h2>人事异动及在职信息</h2>
+  </header>
+</div>
+
+<section class="holder">
+  <div id="company_experience_wrap">
+    <script type="text/template" id="company_experience_tpl">
+      <ul class="form-item-list form-group-nospacing">
+        <%for(var i = 0, len = company_experience_data.length; i < len; i++) { %>
+        <li class="form-item-li">
+          <span class="label form-label" style="text-align: center;"><%=company_experience_data[i].title%></span>
+          <div style="text-align: center;color:#e51700">
+            <h2><%=company_experience_data[i].value%></h2>
+          </div>
+        </li>
+        <%}%>
+      </ul>
+    </script>
+  </div>
+  <hr>
+  <div class="form-group-nospacing">
+    <div class="wrapper1"></div>
+  </div>
+</section>

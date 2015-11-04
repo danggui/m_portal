@@ -1,0 +1,38 @@
+{
+  "status": "1",
+  "message": "success",
+  "data": [
+    {
+      "title": "员工编号",
+      "value": "FSH00093"
+    },
+    {
+      "title": "员工姓名",
+      "value": "杨幸"
+    },
+    {
+      "title": "姓",
+      "value": "杨"
+    },
+    {
+      "title": "名",
+      "value": "幸"
+    },
+    {
+      "title": "员工ID",
+      "value": "3723"
+    },
+    {
+      "title": "生日",
+      "value": "1986-02-02"
+    },
+    {
+      "title": "性别",
+      "value": "女"
+    },
+    {
+      "title": "国籍",
+      "value": "中国"
+    }
+  ]
+}

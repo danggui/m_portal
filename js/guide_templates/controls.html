@@ -1,0 +1,590 @@
+<div style="background: #FFF;height: 100%;overflow-x: hidden;">
+
+  <div id="header" class="header">
+    <header>
+      <h1>样式集合-控件</h1>
+    </header>
+  </div>
+
+  <section style="padding: 5px 5px;">
+    <h1>按钮</h1>
+
+    <div class="form-group">
+      <h3>未分组</h3>
+      <div class="btn-bar">
+        <button type="button">普通的按钮</button>
+      </div>
+      <h3>行分组</h3>
+      <ul class="btn-h-group">
+        <li class="flex-btn"><button type="button" class="btn-gray">低调的按钮</button></li>
+        <li class="flex-btn"><button type="button" class="btn-light-gray">忧郁的按钮</button></li>
+      </ul>
+      <h3>列分组</h3>
+      <div class="btn-v-group">
+        <button type="button">普通的按钮</button>
+        <button type="button" class="btn-gray">低调的按钮</button>
+        <button type="button" class="btn-link">白白的按钮</button>
+        <button type="button" class="btn-white">宛若新生的按钮</button>
+        <button type="button" class="btn-lg">肥胖的按钮</button>
+        <button type="button" class="btn-sm">精妙的按钮</button>
+        <button type="button" class="btn-cute">可爱的按钮</button>
+      </div>
+      <hr>
+      <h3>代码：</h3>
+      <pre class="wscroller form-group-nospacing"><code class="language-markup sscroller">&lt;h3>未分组&lt;/h3>
+&lt;div class="btn-bar">
+&lt;button type="button">普通的按钮&lt;/button>
+&lt;/div>
+&lt;h3>行分组&lt;/h3>
+&lt;ul class="btn-h-group">
+&lt;li class="flex-btn">&lt;button type="button" class="btn-gray">低调的按钮&lt;/button>&lt;/li>
+&lt;li class="flex-btn">&lt;button type="button" class="btn-light-gray">忧郁的按钮&lt;/button>&lt;/li>
+&lt;/ul>
+&lt;h3>列分组&lt;/h3>
+&lt;div class="btn-v-group gap-v-sm">
+&lt;button type="button">普通的按钮&lt;/button>
+&lt;button type="button" class="btn-gray">低调的按钮&lt;/button>
+&lt;button type="button" class="btn-link">白白的按钮&lt;/button>
+&lt;button type="button" class="btn-white">宛若新生的按钮&lt;/button>
+&lt;button type="button" class="btn-lg">肥胖的按钮&lt;/button>
+&lt;button type="button" class="btn-sm">精妙的按钮&lt;/button>
+&lt;button type="button" class="btn-cute">可爱的按钮&lt;/button>
+&lt;/div></code></pre>
+      <h3>说明：</h3>
+      <ul class="list-unordered">
+        <li>默认按钮根据内容定义宽度</li>
+        <li>行分组，按钮组自动分配宽度,需要用ul,li做包裹，li的class需要flex-btn样式</li>
+        <li>列分组，按钮组自适应组宽度</li>
+      </ul>
+    </div>
+    <h1>文本框</h1>
+
+    <div class="form-group">
+      <h3>行分组</h3>
+      <ul class="btn-h-group">
+        <li class="flex-btn"><input type="text" value="文字示例"></li>
+        <li class="flex-btn"><input type="text" disabled value="被禁用的文字示例"></li>
+      </ul>
+      <h3>列分组</h3>
+      <p class="btn-v-group">
+        <input type="text" value="写错了的文字示例" class="has-error">
+        <input type="text" disabled value="写错了还不能改的文字示例" class="has-error">
+      </p>
+      <hr>
+      <h3>代码：</h3>
+      <pre class="wscroller form-group-nospacing"><code class="language-markup sscroller">&lt;h3>行分组&lt;/h3>
+&lt;p class="btn-h-group">
+&lt;input type="text" value="文字示例">
+&lt;input type="text" disabled value="被禁用的文字示例">
+&lt;/p>
+&lt;h3>列分组&lt;/h3>
+&lt;p class="btn-v-group">
+&lt;input type="text" value="写错了的文字示例" class="has-error">
+&lt;input type="text" disabled value="写错了还不能改的文字示例" class="has-error">
+&lt;/p></code></pre>
+      <h3>说明：</h3>
+      <ul class="list-unordered">
+        <li>错误的样式需在文本框下加.has-error</li>
+      </ul>
+    </div>
+    <h1>多行文本框</h1>
+
+    <div class="form-group">
+      <p>
+        <textarea>
+1
+2
+3
+4
+5</textarea>
+      </p>
+
+      <p>
+        <textarea class="has-error"></textarea>
+      </p>
+      <hr>
+      <h3>代码：</h3>
+      <pre class="wscroller form-group-nospacing"><code class="language-markup sscroller">&lt;textarea>&lt;/textarea>
+&lt;textarea class="has-error">&lt;/textarea>
+</code></pre>
+      <h3>说明：</h3>
+      <ul class="list-unordered">
+        <li>错误的样式需在多行文本框下加<code>.has-error</code></li>
+      </ul>
+    </div>
+
+    <h1>checkbox</h1>
+
+    <div class="form-group">
+      <p>
+        <label class="check"><input type="checkbox" checked><i></i><span>选择项 1</span></label>
+        <label class="check"><input type="checkbox"><i></i><span>选择项 2</span></label>
+        <label class="check"><input type="checkbox" disabled><i></i><span>禁用</span></label>
+      </p>
+      <p>
+        <label class="check"><input type="radio" name="c" checked><i></i><span>选择项 1</span></label>
+        <label class="check"><input type="radio" name="c"><i></i><span>选择项 2</span></label>
+        <label class="check"><input type="radio" name="c" disabled><i></i><span>禁用</span></label>
+      </p>
+      <hr>
+      <h3>代码：</h3>
+      <pre class="wscroller form-group-nospacing"><code class="language-markup sscroller">&lt;label class="check">&lt;input type="checkbox" checked>&lt;i>&lt;/i>&lt;span>选择项 1&lt;/span>&lt;/label>
+&lt;label class="check">&lt;input type="checkbox" disabled>&lt;i>&lt;/i>&lt;span>禁用&lt;/span>&lt;/label>
+&lt;label class="check">&lt;input type="radio" checked>&lt;i>&lt;/i>&lt;span>选择项 1&lt;/span>&lt;/label>
+&lt;label class="check">&lt;input type="radio" disabled>&lt;i>&lt;/i>&lt;span>禁用&lt;/span></code></pre>
+      <h3>说明：</h3>
+      <ul class="list-unordered">
+        <li>选择项每条都用 <code>label.check</code> 打包，文字部分用 <code>span</code> 打包，文字前需加入<i></i>否则无法显示出样式。</li>
+        <li><code>checked</code> 属性不要写成 <code>checked=true</code> 或 <code>checked=checked</code>。</li>
+      </ul>
+    </div>
+
+    <h1>提示类控件</h1>
+
+    <div class="form-group">
+      <h3>alert组件</h3>
+      <div class="holder ct-layer ct-Mask" style="position: static;">
+        <div class="pop-box">
+          <div class="pop-box-hd">基本alert</div>
+          <div class="pop-box-bd">
+            <div class="pop-box-tips">
+              content</div>
+            <div class="pop-box-btns">
+              <div class="pop-box-flexbd pop-box-btns-cancel">
+                cancel</div>
+              <div class="pop-box-flexbd pop-box-btns-ok">
+                ok</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <h3>说明：</h3>
+      <ul class="list-unordered">
+        <li>具体用法参照控件js调用</li>
+      </ul>
+
+      <h3>Toast组件</h3>
+      <div class="holder ct-layer ct-Mask ct-toast" style="position: static;">
+        <div class="ct-layer-padding" style="margin: 0 auto;">
+          <div class="ct-Mask-content">
+            content
+          </div>
+        </div>
+      </div>
+      <hr>
+      <h3>说明：</h3>
+      <ul class="list-unordered">
+        <li>具体用法参照控件js调用</li>
+      </ul>
+      <h3>loading组件</h3>
+      <div class="holder ct-layer ct-Mask ct-loading" style="position: static;">
+        <div class="ct-breaking-load">
+          <div class="ct-ui-w-loading">
+          </div>
+          <!--<div class="ct-ui-m-logo">-->
+          <!--</div>-->
+        </div>
+      </div>
+      <hr>
+      <h3>说明：</h3>
+      <ul class="list-unordered">
+        <li>具体用法参照控件js调用</li>
+      </ul>
+      <h3>冒泡提示</h3>
+      <div class="holder ct-layer ct-Mask" style="position: static;">
+        <ul class="ct-ui-b-layer b-layer-after">
+          <li data-index="0" data-flag="c" class="">123</li>
+          <li data-index="1" data-flag="c" class="ct-ui-b-current">1233</li>
+          <li data-index="2" data-flag="c" class="">1243</li>
+          <li data-index="3" data-flag="c" class="">1253</li>
+          <i></i>
+        </ul>
+      </div>
+      <hr>
+      <h3>说明：</h3>
+      <ul class="list-unordered">
+        <li>具体用法参照控件js调用</li>
+      </ul>
+    </div>
+
+    <h1>select类控件</h1>
+
+    <div class="form-group">
+      <h3>弹出层式select 方式1</h3>
+      <div class="holder ct-layer ct-Mask" style="position: static;">
+        <div class="pop-box">
+          <div class="pop-box-hd">弹出层式select</div>
+          <div class="pop-box-bd">
+            <ul class="form-item-list">
+              <li class="form-item-li">条件1</li>
+              <li class="form-item-li current">条件2</li>
+              <li class="form-item-li">条件3</li>
+            </ul>
+            <div class="pop-box-btns">
+              <div class="pop-box-flexbd pop-box-btns-cancel">
+                cancel</div>
+              <div class="pop-box-flexbd pop-box-btns-ok">
+                ok</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <h3>说明：</h3>
+      <ul class="list-unordered">
+        <li>具体用法参照控件js调用</li>
+      </ul>
+
+      <h3>嵌入式select</h3>
+      <div class="holder ct-layer ct-Mask" style="position: static;">
+        <div class="ct-ui-roller" style="height: 132px;">
+          <ul class="ul-list">
+            <li data-key="1" data-index="0" class="">
+              中国</li>
+            <li data-key="2" data-index="1" class="current">
+              美国</li>
+            <li data-key="3" data-index="2" class="">
+              英国</li>
+            <li data-key="4" data-index="3" class="">
+              法国</li>
+            <li data-key="5" data-index="4" class="">
+              香港</li>
+          </ul>
+          <div class="ct-ui-mask-gray">
+          </div>
+          <div class="ct-ui-lines">
+            &nbsp;</div>
+        </div>
+      </div>
+      <hr>
+      <h3>说明：</h3>
+      <ul class="list-unordered">
+        <li>具体用法参照控件js调用</li>
+      </ul>
+      <h3>弹出层式select 方式2</h3>
+      <div class="holder ct-layer ct-Mask" style="position: static;">
+        <div class="pop-box">
+          <div class="pop-box-hd">弹出层式select</div>
+          <div class="pop-box-bd">
+            <div class="btn-h-group">
+              <div class="ct-ui-roller flex-btn" style="height: 132px;">
+                <ul class="ul-list">
+                  <li data-key="1" data-index="0" class="">
+                    中国</li>
+                  <li data-key="2" data-index="1" class="current">
+                    美国</li>
+                  <li data-key="3" data-index="2" class="">
+                    英国</li>
+                  <li data-key="4" data-index="3" class="">
+                    法国</li>
+                  <li data-key="5" data-index="4" class="">
+                    香港</li>
+                </ul>
+                <div class="ct-ui-mask-gray">
+                </div>
+                <div class="ct-ui-lines">
+                  &nbsp;</div>
+              </div>
+              <div class="ct-ui-roller flex-btn" style="height: 132px;">
+                <ul class="ul-list">
+                  <li data-key="1" data-index="0" class="">
+                    中国</li>
+                  <li data-key="2" data-index="1" class="current">
+                    美国</li>
+                  <li data-key="3" data-index="2" class="">
+                    英国</li>
+                  <li data-key="4" data-index="3" class="">
+                    法国</li>
+                  <li data-key="5" data-index="4" class="">
+                    香港</li>
+                </ul>
+                <div class="ct-ui-mask-gray">
+                </div>
+                <div class="ct-ui-lines">
+                  &nbsp;</div>
+              </div>
+            </div>
+            <div class="pop-box-btns">
+              <div class="pop-box-flexbd pop-box-btns-cancel">
+                cancel</div>
+              <div class="pop-box-flexbd pop-box-btns-ok">
+                ok</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <h3>说明：</h3>
+      <ul class="list-unordered">
+        <li>具体用法参照控件js调用</li>
+      </ul>
+    </div>
+
+    <h1>switch类控件</h1>
+
+    <div class="form-group">
+      <div class="holder ct-layer ct-Mask" style="position: static;">
+        <div class="ct-ui-switch current">
+          <div class="ct-ui-switch-bg current">
+          </div>
+          <div class="ct-ui-switch-slide">
+          </div>
+        </div>
+
+        <div class="ct-ui-switch">
+          <div class="ct-ui-switch-bg">
+          </div>
+          <div class="ct-ui-switch-slide">
+          </div>
+        </div>
+      </div>
+      <hr>
+      <h3>说明：</h3>
+      <ul class="list-unordered">
+        <li>具体用法参照控件js调用</li>
+      </ul>
+    </div>
+
+    <h1>tab类控件</h1>
+
+    <div class="form-group">
+      <div class="holder ct-layer ct-Mask" style="position: static;">
+          <ul class="ct-ui-tab-mod">
+            <li data-key="1" data-index="0" class="ct-ui-tab-current">
+              图片</li>
+            <li data-key="2" data-index="1" class="">
+              音乐</li>
+            <li data-key="3" data-index="2" class="">
+              视频</li>
+            <li data-key="4" data-index="3" class="">
+              其它</li>
+            <i class="ct-ui-tab-scrollbar ct-ui-tabnum4"></i>
+          </ul>
+      </div>
+      <hr>
+      <h3>说明：</h3>
+      <ul class="list-unordered">
+        <li>具体用法参照控件js调用</li>
+      </ul>
+    </div>
+
+    <h1>Calender类控件</h1>
+
+    <div class="form-group">
+      <div class="holder ct-layer ct-Mask" style="position: static;">
+        <h1 class="ct-ui_cldmonth">
+          <i class="previous i_bef" data-date="2014-9"></i>
+          2014年10月
+          <i class="next i_bef" data-date="2014-11"></i>
+        </h1>
+        <ul class="ct-ui_cldweek">
+          <li>日</li>
+          <li>一</li>
+          <li>二</li>
+          <li>三</li>
+          <li>四</li>
+          <li>五</li>
+          <li>六</li>
+        </ul>
+        <section class="ct-ui_cldunit">
+          <ul class="ct-ui_cld_daybox">
+            <li class="ct-ui_invalid"></li>
+            <li class="ct-ui_invalid"></li>
+            <li class="ct-ui_invalid"></li>
+            <li class="ct-ui_calendar_item" data-date="2014-9-1">1 </li>
+            <li class="ct-ui_calendar_item  ct-ui_cld_daypass " data-date="2014-9-2">2 </li>
+            <li class="ct-ui_calendar_item  ct-ui_cld_daypass " data-date="2014-9-3">3 </li>
+            <li class="ct-ui_calendar_item  ct-ui_cld_daypass " data-date="2014-9-4">4 </li>
+            <li class="ct-ui_calendar_item  ct-ui_cld_daypass " data-date="2014-9-5">5 </li>
+            <li class="ct-ui_calendar_item  ct-ui_cld_daypass " data-date="2014-9-6">6 </li>
+            <li class="ct-ui_calendar_item  ct-ui_cld_daypass " data-date="2014-9-7">7 </li>
+            <li class="ct-ui_calendar_item  ct-ui_cld_daypass " data-date="2014-9-8">8 </li>
+            <li class="ct-ui_calendar_item  ct-ui_cld_daypass " data-date="2014-9-9">9 </li>
+            <li class="ct-ui_calendar_item  ct-ui_cld_daypass " data-date="2014-9-10">10 </li>
+            <li class="ct-ui_calendar_item  ct-ui_cld_daypass " data-date="2014-9-11">11 </li>
+            <li class="ct-ui_calendar_item  ct-ui_cld_daypass " data-date="2014-9-12">12 </li>
+            <li class="ct-ui_calendar_item  ct-ui_cld_daypass " data-date="2014-9-13">13 </li>
+            <li class="ct-ui_calendar_item  ct-ui_cld_daypass " data-date="2014-9-14">14 </li>
+            <li class="ct-ui_calendar_item  ct-ui_cld_daypass " data-date="2014-9-15">15 </li>
+            <li class="ct-ui_calendar_item " data-date="2014-9-16">16 </li>
+            <li class="ct-ui_calendar_item " data-date="2014-9-17">17 </li>
+            <li class="ct-ui_calendar_item " data-date="2014-9-18">18 </li>
+            <li class="ct-ui_calendar_item " data-date="2014-9-19">19 </li>
+            <li class="ct-ui_calendar_item " data-date="2014-9-20">20 </li>
+            <li class="ct-ui_calendar_item " data-date="2014-9-21">21 </li>
+            <li class="ct-ui_calendar_item " data-date="2014-9-22">22 </li>
+            <li class="ct-ui_calendar_item " data-date="2014-9-23">23 </li>
+            <li class="ct-ui_calendar_item " data-date="2014-9-24">24 </li>
+            <li class="ct-ui_calendar_item " data-date="2014-9-25">25 </li>
+            <li class="ct-ui_calendar_item " data-date="2014-9-26">26 </li>
+            <li class="ct-ui_calendar_item " data-date="2014-9-27">27 </li>
+            <li class="ct-ui_calendar_item " data-date="2014-9-28">28 </li>
+            <li class="ct-ui_calendar_item " data-date="2014-9-29">29 </li>
+            <li class="ct-ui_calendar_item " data-date="2014-9-30">30 </li>
+            <li class="ct-ui_calendar_item " data-date="2014-9-31">31 </li>
+          </ul>
+        </section>
+      </div>
+      <hr>
+      <h3>说明：</h3>
+      <ul class="list-unordered">
+        <li>具体用法参照控件js调用</li>
+      </ul>
+    </div>
+
+    <h1>GroupList分组类控件</h1>
+
+    <div class="form-group">
+      <div class="holder ct-layer ct-Mask" style="position: static;">
+        <ul class="ctui-itmes">
+          <li data-groupindex="0" class=" ctui-arrow-open">
+            <span class="ctui-t">
+             样式集合
+            </span>
+            <ul class="ctui-n">
+              <li data-index="0" data-group="0" data-filter="typography 文本 ">文本</li>
+              <li data-index="1" data-group="0" data-filter="icons 图标 ">图标</li>
+              <li data-index="2" data-group="0" data-filter="controls 控件 ">控件</li>
+              <li data-index="3" data-group="0" data-filter="form 表单 ">表单</li>
+            </ul>
+          </li>
+          <li data-groupindex="1" class=" ctui-arrow-open">
+            <span class="ctui-t">
+             滚动类组件
+            </span>
+            <ul class="ctui-n">
+              <li data-index="0" data-group="1" data-filter="scroll.across 横向滚动条 ">横向滚动条</li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+      <hr>
+      <h3>说明：</h3>
+      <ul class="list-unordered">
+        <li>具体用法参照控件js调用</li>
+      </ul>
+    </div>
+
+    <h1>搜索类控件</h1>
+
+    <div class="form-group">
+      <div class="holder ct-layer ct-Mask" style="position: static;">
+        <form class="form-search">
+          <input type="text">
+          <button class="btn-icon btn-link"><span class="icon"></span></button>
+        </form>
+      </div>
+
+      <hr>
+      <h3>代码：</h3>
+      <pre class="wscroller form-group-nospacing"><code class="language-markup sscroller">&lt;form class="form-search">
+&lt;input type="text">
+&lt;button class="btn-icon btn-link">&lt;span class="icon">&lt;/span>&lt;/button>
+&lt;/form></code></pre>
+      <h3>说明：</h3>
+      <ul class="list-unordered">
+        <li>选择项每条都用 <code>label.check</code> 打包，文字部分用 <code>span</code> 打包，文字前需加入<i></i>否则无法显示出样式。</li>
+        <li><code>checked</code> 属性不要写成 <code>checked=true</code> 或 <code>checked=checked</code>。</li>
+      </ul>
+    </div>
+
+    <h1>Side Menu类控件</h1>
+
+    <div class="form-group">
+      <div class="holder ct-layer ct-Mask" style="position: static;">
+        <div class="ct-main_menu" style="overflow: hidden;position: relative">
+          <div class="side-menu-list">
+            <div class="trigger">
+              SAP函数管理
+            </div>
+            <ul style="display: none;">
+              <li data-leaf-id="030100">
+                <a data-load-page="/func/func_mgt.html">
+                    aaa
+                </a>
+              </li>
+              <li data-leaf-id="030200">
+                <a data-load-page="/func/param_mgt.html">
+                    bbb
+                </a>
+              </li>
+              <li data-leaf-id="030300">
+                <a data-load-page="/func/param_detail.html">
+                    ccc
+                </a>
+              </li>
+              <li data-leaf-id="030400">
+                <a data-load-page="/func/func_param.html">
+                    ddd
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="side-menu-list">
+            <div class="trigger">
+              SAP函数管理
+            </div>
+            <ul style="display: none;">
+              <li data-leaf-id="030100">
+                <a data-load-page="/func/func_mgt.html">
+                    aaa
+                </a>
+              </li>
+              <li data-leaf-id="030200">
+                <a data-load-page="/func/param_mgt.html">
+                    bbb
+                </a>
+              </li>
+              <li data-leaf-id="030300">
+                <a data-load-page="/func/param_detail.html">
+                    ccc
+                </a>
+              </li>
+              <li data-leaf-id="030400">
+                <a data-load-page="/func/func_param.html">
+                    ddd
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="side-menu-list">
+            <div class="trigger">
+              系统配置管理
+            </div>
+            <ul style="display: block;">
+              <li data-leaf-id="040100">
+                <a data-load-page="/admin/sysresource_mgt.html">
+                    aaaa
+                </a>
+              </li>
+              <li data-leaf-id="040200">
+                <a data-load-page="/flow/admin/apptype_mgt.html">
+                    bbbb
+                </a>
+              </li>
+              <li data-leaf-id="040300">
+                <a data-load-page="/admin/translation.html">
+                  Config.js 管理
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <h3>说明：</h3>
+      <ul class="list-unordered">
+        <li>具体用法参照控件js调用</li>
+      </ul>
+    </div>
+  </section>
+</div>
+<script>
+
+  Prism.highlightAll();
+
+</script>

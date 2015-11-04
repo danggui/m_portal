@@ -1,0 +1,32 @@
+<div id="ChangePWD-box">
+<script type="text/template" id="ChangePWD">
+<div id="header" class="header">
+  <header>
+    <h2><%=lanStore.passwordSettings %></h2>
+  </header>
+</div>
+<div class="pages-bg">
+<section class="holder">
+    <ul>
+        <li class="form-item-li form-item-li-noborder">
+          <div class="form-control"><input type="password" id="orgPwd" placeholder="<%=lanStore.OriginalPassword %>" style="line-height: 18px;"></div>
+        </li>
+        <li class="form-item-li form-item-li-noborder">
+          <div class="form-control"><input type="password"  id="newPwd" placeholder="<%=lanStore.NewPassword %>" style="line-height: 18px;"></div>
+        </li>
+        <li class="form-item-li form-item-li-noborder">
+          <div class="form-control"><input type="password" id="new2Pwd" placeholder="<%=lanStore.ComfirmNewPWD %>" style="line-height: 18px;"></div>
+        </li>
+      </ul>
+
+    <div class="gap-v">
+        <%=lanStore.PWDrule %>
+    </div>
+    <ul id="operate" class="btn-h-group">
+      <li class="flex-btn"><button id="btnCancel"><%=lanStore.cancel %></button></li>
+      <li class="flex-btn"><button id="btnOk"><%=lanStore.confirm %></button></li>
+    </ul>
+</section>
+</div>
+</script>
+</div>

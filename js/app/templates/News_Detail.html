@@ -1,0 +1,23 @@
+<div id="header" class="header">
+  <header>
+    <h2 id="newsdetail-title"></h2>
+  </header>
+</div>
+<section id="newsDetail_wrap" class="wrapperCss">
+  <div id="scroller" class="scrollerCss holder">
+  </div>
+</section>
+ <script type="text/template" id="newsDetail_tpl">
+     <ul class="form-item-Detail form-group-nospacing newsDetail">
+         <li class="form-item-li form-item-li-noborder img_desc">
+             <span><%=news_Detail_data.img_desc%></span>
+         </li>
+         <li class="form-item-li form-item-li-noborder holder newsDTitle">
+             <span><%=news_Detail_data.title%></span>
+         </li>
+         <li class="form-item-li form-item-li-noborder holder" style="overflow: auto">
+             <span><%=news_Detail_data.content%></span>
+         </li>
+     </ul>
+     <div style="height:4.75em;width:100%"></div>
+ </script>

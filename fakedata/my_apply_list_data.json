@@ -1,0 +1,118 @@
+{
+  "status": "0/1",
+  "message": "error/success",
+  "data": [
+    {
+      "apply_type": "0",
+      "apply_name": "平日加班",
+      "apply_span": "2014.8.7,2小时",
+      "apply_time": "2014.08.26 09:00",
+      "approval": [
+        {
+          "position": "研发部经理",
+          "name": "李四",
+          "state": "0/1/2",
+          "state_name": "已同意",
+          "opinion": "同意",
+          "mobile": "15316890391",
+          "email": "lisi@abc.com",
+          "app_time": "2014-02-08"
+        },
+        {
+          "position": "HR",
+          "name": "李曼",
+          "state": "0/1/2",
+          "state_name": "待审批",
+          "opinion": "",
+          "mobile": "15316890391",
+          "email": "lisi@abc.com",
+          "app_time": ""
+        }
+      ]
+    },
+    {
+      "apply_type": "0",
+      "apply_name": "平日加班",
+      "apply_span": "2014.8.7,2小时",
+      "apply_time": "2014.08.26 09:00",
+      "approval": [
+        {
+          "position": "研发部经理",
+          "name": "李四",
+          "state": "0/1/2",
+          "state_name": "已同意",
+          "opinion": "同意",
+          "mobile": "15316890391",
+          "email": "lisi@abc.com",
+          "app_time": "2014-02-08"
+        },
+        {
+          "position": "HR",
+          "name": "李曼",
+          "state": "0/1/2",
+          "state_name": "待审批",
+          "opinion": "",
+          "mobile": "15316890391",
+          "email": "lisi@abc.com",
+          "app_time": ""
+        }
+      ]
+    },
+    {
+      "apply_type": "0",
+      "apply_name": "平日加班",
+      "apply_span": "2014.8.7,2小时",
+      "apply_time": "2014.08.26 09:00",
+      "approval": [
+        {
+          "position": "研发部经理",
+          "name": "李四",
+          "state": "0",
+          "state_name": "已同意",
+          "opinion": "同意",
+          "mobile": "15316890391",
+          "email": "lisi@abc.com",
+          "app_time": "2014-02-08"
+        },
+        {
+          "position": "HR",
+          "name": "李曼",
+          "state": "1",
+          "state_name": "待审批",
+          "opinion": "",
+          "mobile": "15316890391",
+          "email": "lisi@abc.com",
+          "app_time": ""
+        }
+      ]
+    },
+    {
+      "apply_type": "0",
+      "apply_name": "平日加班",
+      "apply_span": "2014.8.7,2小时",
+      "apply_time": "2014.08.26 09:00",
+      "approval": [
+        {
+          "position": "研发部经理",
+          "name": "李四",
+          "state": "2",
+          "state_name": "已同意",
+          "opinion": "同意",
+          "mobile": "15316890391",
+          "email": "lisi@abc.com",
+          "app_time": "2014-02-08"
+        },
+        {
+          "position": "HR",
+          "name": "李曼",
+          "state": "2",
+          "state_name": "待审批",
+          "opinion": "",
+          "mobile": "15316890391",
+          "email": "lisi@abc.com",
+          "app_time": ""
+        }
+      ]
+    }
+  ]
+}

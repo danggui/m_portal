@@ -1,0 +1,46 @@
+{
+  "message": "success",
+  "status": "1",
+  "data": [
+    {
+      "leave_type": 1,
+      "leave_name": "年假"
+    },
+    {
+      "leave_type": 2,
+      "leave_name": "事假"
+    },
+    {
+      "leave_type": 3,
+      "leave_name": "短病假（扣薪）"
+    },
+    {
+      "leave_type": 4,
+      "leave_name": "长病假（扣薪）"
+    },
+    {
+      "leave_type": 5,
+      "leave_name": "调休假"
+    },
+    {
+      "leave_type": 6,
+      "leave_name": "工伤假"
+    },
+    {
+      "leave_type": 7,
+      "leave_name": "婚假"
+    },
+    {
+      "leave_type": 8,
+      "leave_name": "丧假"
+    },
+    {
+      "leave_type": 10,
+      "leave_name": "产假"
+    },
+    {
+      "leave_type": 11,
+      "leave_name": "旷工"
+    }
+  ]
+}

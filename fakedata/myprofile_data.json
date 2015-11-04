@@ -1,0 +1,105 @@
+{
+  "nodeList": [
+    {
+      "id": "0001",
+      "text": "我的信息",
+      "url": "",
+      "children": [
+      ]
+    },
+    {
+      "id": "0003",
+      "text": "我的工资单",
+      "url": "ViewSalary",
+      "children": [
+      ]
+    },
+    {
+      "id": "0004",
+      "text": "我的工作日历",
+      "url": "",
+      "children": [
+      ]
+    },
+    {
+      "id": "0005",
+      "text": "我的休假",
+      "url": "",
+      "children": [
+      ]
+    },
+    {
+      "id": "0006",
+      "text": "我的加班",
+      "url": "",
+      "children": [
+      ]
+    },
+    {
+      "id": "0007",
+      "text": "工作清单",
+      "url": "",
+      "children": [
+      ]
+    },
+    {
+      "id": "0008",
+      "text": "我的团队",
+      "url": "",
+      "children": [
+      ]
+    },
+    {
+      "id": "0009",
+      "text": "团队日历",
+      "url": "",
+      "children": [
+      ]
+    },
+    {
+      "id": "0010",
+      "text": "公司政策",
+      "url": "",
+      "children": [
+      ]
+    },
+    {
+      "id": "0011",
+      "text": "设置",
+      "url": "",
+      "children": [
+        {
+          "id": "030101",
+          "text": "密码保护",
+          "url": "/func/func_mgt.html"
+        },
+        {
+          "id": "030102",
+          "text": "账户管理",
+          "url": "/func/func_mgt.html"
+        },
+        {
+          "id": "030103",
+          "text": "F&Q",
+          "url": "/func/func_mgt.html"
+        },
+        {
+          "id": "030104",
+          "text": "联系我们",
+          "url": "/func/func_mgt.html"
+        },
+        {
+          "id": "030105",
+          "text": "建议反馈",
+          "url": "/func/func_mgt.html"
+        },
+        {
+          "id": "030106",
+          "text": "关于CDP Cloud",
+          "url": "/func/func_mgt.html"
+        }
+      ]
+    }
+  ]
+}
+

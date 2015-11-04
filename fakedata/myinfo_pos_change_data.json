@@ -1,0 +1,33 @@
+{
+  "status": 1,
+  "message": "success",
+  "data": {
+    "experience_info": [
+      {
+        "transfer": "入职",
+        "transfer_date": "2014-07-22",
+        "time_span": "2014-07-22~9999-12-31",
+        "info": [
+          {
+            "title": "员工姓名",
+            "value": "杨幸"
+          }
+        ]
+      }
+    ],
+    "company_experience": [
+      {
+        "title": "加入公司",
+        "value": "472天"
+      },
+      {
+        "title": "加入部门",
+        "value": "472天"
+      },
+      {
+        "title": "作为职位",
+        "value": "472天"
+      }
+    ]
+  }
+}

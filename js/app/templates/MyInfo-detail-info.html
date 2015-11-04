@@ -1,0 +1,22 @@
+<div id="header" class="header">
+  <header>
+    <h2>个人信息</h2>
+  </header>
+</div>
+
+<section class="holder">
+  <div id="MyInfo-detail-info-wrap">
+    <script type="text/template" id="MyInfo-detail-info">
+    <ul class="form-item-list form-group-nospacing padding-li" >
+      <%for(var i = 0, len = data.length; i < len; i++) { %>
+        <li class="form-item-li form-item-li-noborder">
+          <span class="label"><%=data[i].title%></span>
+          <div class="pull-right">
+            <%=data[i].value%>
+          </div>
+        </li>
+      <%}%>
+    </ul>
+    </script>
+  </div>
+</section>

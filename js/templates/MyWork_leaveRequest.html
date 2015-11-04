@@ -1,0 +1,67 @@
+<div id="header" class="header">
+    <header>
+        <h2 id="leaveRequest-title"></h2>
+    </header>
+</div>
+<section id="todoList_wrap" class="wrapperCss" style="position: absolute;width: 100%;z-index: 1;left: 0;top: 48px;bottom: 0;overflow: auto;background: rgb(221, 221, 221)">
+    <div id="scroller" class="scrollerCss holder">
+        <ul class="form-item-list padding-li">
+            <li class="form-item-li btn-v-group">
+                <button type="button" class="btn-light-gray" id="selectLeaveType">
+                    <span class="icon-btn icon-btn-time"></span>
+                    <span id="leave_type" placeholder="0"></span>
+                </button>
+            </li>
+        </ul>
+        <hr style="border-color: #7E7E7E;width: 100%;">
+        <ul class="form-item-list padding-li"  style="float: left;width: 100%;">
+            <li class="form-item-li form-item-li-noborder" style="float: left;width: 100%;">
+                <h2><span class="leaveTime"></span></h2>
+            </li>
+            <li class="form-item-li form-item-li-noborder" id="selectStartDate" style="float: left;width: 100%;">
+                <div class="form-control" style="float: left;width: 100%">
+                    <div class="form-control-half" style="width: 25%;float: left;height: 42px;line-height: 42px;">
+                        <span class="leaveTimeStart"></span>
+                    </div>
+                    <div class="form-control-half" style="width: 75%;float: right;">
+                    <button type="button" id="startTime" class="btn-light-gray selectTime">
+                        <span class="icon-btn icon-btn-time"></span>
+                        <span id="input_startDate">0000-00-00</span>
+                    </button>
+                    </div>
+                </div>
+            </li>
+            <li class="form-item-li form-item-li-noborder" id="selectEndDate" style="float: left;width: 100%;">
+                <div class="form-control" style="float: left;width: 100%">
+                    <div class="form-control-half" style="width: 25%;float: left;height: 42px;line-height: 42px;">
+                        <span class="leaveTimeEnd"></span>
+                    </div>
+                    <div class="form-control-half" style="width: 75%;float: right;">
+                        <button type="button" id="endTime" class="btn-light-gray selectTime">
+                            <span class="icon-btn icon-btn-time"></span>
+                            <span id="input_endDate">0000-00-00</span>
+                        </button>
+                    </div>
+                </div>
+            </li>
+            <li class="form-item-li form-item-li-noborder" style="float: left;width: 100%;"><span class="leaveTimeDays"></span><input class="btn-link" id="input_leaveDays" type="text" value="" name="reason" placeholder="0"></li>
+        </ul>
+        <hr style="border-color: #7E7E7E;width: 100%;">
+        <ul class="form-item-list padding-li"  style="float: left;width: 100%;">
+            <li class="form-item-li btn-v-group">
+                <h2><span class="leaveReason"></span></h2>
+                <textarea id="leave_reason" style="height: 90px;border: none;border-radius: 5px;box-shadow: inset 0px 2px 5px #C5C5C5;margin: 5px 0;" placeholder="say something ... ..." class="leave-reason-prompt"></textarea>
+            </li>
+        </ul>
+        <ul class="form-item-list padding-li"  style="float: left;width: 100%;">
+            <li class="form-item-li btn-v-group">
+                <button id="leaveApplySubmit" class="leaveApplySubmit" style="background: #01bbd4;"></button>
+            </li>
+        </ul>
+
+    </div>
+    <div style="height:4.65em;width:100%;float: left;" ></div>
+</section>
+<script type="text/template" id="leaveList_tp0">
+
+</script>

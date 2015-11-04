@@ -1,0 +1,15 @@
+﻿<div class="pop-box">
+  <div class="pop-box-hd">
+    <%=title %>
+  </div>
+  <div class="pop-box-bd">
+    <div class="btn-h-group">
+    </div>
+    <div class="pop-box-btns">
+      <% for(var i = 0, len = btns.length; i < len; i++ ) {%>
+      <div class="pop-box-flexbd <%=btns[i].className%>">
+        <%=btns[i].name%></div>
+      <% } %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes" >
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" >
+  <meta name="viewport"  content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0">
+  <title>Micro Cloud</title>
+  <!--<link rel="stylesheet" href="css/main.css">-->
+  <!--<link rel="stylesheet" href="css/reset.css">-->
+  <!--<link rel="stylesheet" href="css/head.css">-->
+  <!--<link rel="stylesheet" href="css/user.css">-->
+
+  <!--<link rel="stylesheet" href="css/ui.css">-->
+
+  <link rel="stylesheet" href="css/base.min.css">
+  <link rel="stylesheet" href="css/cdpcloud.min.css">
+  <!--<link rel="stylesheet" href="css/user.min.css">-->
+  <script src="js/thrd_lib/underscore/underscore.js"></script>
+  <script src="js/thrd_lib/underscore/underscore.extend.js"></script>
+</head>
+<body>
+<div id="header" class="header">
+  <header>
+    <h1>附件预览</h1>
+    <i class="returnico i_bef" onclick="window.history.back();"></i>
+  </header>
+</div>
+<script>
+  var img = document.createElement('img');
+  var path = '';//_.getUrlParam(window.location.href,'path');
+  path = _.getUrlParam(window.location.href,'path').toString();
+  img.src = path.indexOf('http')>=0?path:'http://'+ path;
+  document.body.appendChild(img);
+</script>
+</body>
+</html>

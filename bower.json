@@ -1,0 +1,21 @@
+{
+  "name": "micro",
+  "version": "1.0.0",
+  "description": "Linking people - One Cloud, All HR.",
+  "authors": [
+    "Lance Zhao"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.15",
+    "underscore": "~1.7.0",
+    "zepto": "~1.1.4",
+    "bootstrap":"~3.0"
+  }
+}

@@ -1,0 +1,56 @@
+<div id="header" class="header">
+  <header>
+    <h2>查看假期</h2>
+  </header>
+</div>
+
+<section class="holder">
+  <div id="left_balance_wrap">
+    <ul class="form-item-list form-group-nospacing padding-li">
+      <li class="form-item-li">
+        <h2>剩余假期</h2>
+      </li>
+      <li class="form-item-li" id="remain_leaves_wrap">
+        <script type="text/template" id="remain_leaves_tpl">
+          <ul class="form-item-list">
+            <%for(var i = 0, len = remain_leaves_data.length; i < len; i++) { %>
+            <li class="form-item-li form-item-li-noborder">
+              <span class="label"><%=remain_leaves_data[i].name%></span>
+              <div class="pull-right"><span><%=remain_leaves_data[i].expiry%></span><span style="margin-left: 40px;width:24px;"><%=remain_leaves_data[i].surplus%></span></div>
+            </li>
+            <%}%>
+          </ul>
+        </script>
+      </li>
+    </ul>
+  </div>
+  <hr>
+  <div>
+    <ul class="form-item-list form-group-nospacing padding-li">
+      <li class="form-item-li">
+        <h2><button type="button" class="btn-light-gray" id="selectMonth">
+          <span class="icon-btn icon-btn-time"></span>
+          <span id="title_month">本月</span>
+        </button>&nbsp;&nbsp;&nbsp;已休假记录</h2>
+      </li>
+        <li class="form-item-li">
+          <div class="wrapper_finish_leaves"></div>
+        </li>
+    </ul>
+  </div>
+  <hr>
+  <div>
+    <ul class="form-item-list form-group-nospacing padding-li">
+      <li class="form-item-li">
+        <h2>未关闭的申请</h2>
+      </li>
+        <li class="form-item-li form-item-li-noborder">
+          <div class="wrapper_unclose_leaves"></div>
+        </li>
+    </ul>
+  </div>
+</section>
+
+<div class="holder">
+  <div class="btn-v-group"><button id="apply_leave">申请休假</button></div>
+</div>

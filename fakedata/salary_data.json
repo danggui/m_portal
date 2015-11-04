@@ -1,0 +1,163 @@
+{
+  "status": "1",
+  "message": "success",
+  "data": [
+    {
+      "total": 7800,
+      "detail": [
+        {
+          "item": "实际基本工资",
+          "value": 6000,
+          "wage_item_code": "9800",
+          "currency": "CNY"
+        },
+        {
+          "item": "实际生活补贴",
+          "value": 1800,
+          "wage_item_code": "9805",
+          "currency": "CNY"
+        }
+      ],
+      "class": "工资",
+      "currency": "CNY"
+    },
+    {
+      "total": 0,
+      "detail": [
+        {
+          "item": "服装津贴",
+          "value": 0,
+          "wage_item_code": "2025",
+          "currency": "CNY"
+        },
+        {
+          "item": "Discover店铺补贴",
+          "value": 0,
+          "wage_item_code": "2000",
+          "currency": "CNY"
+        },
+        {
+          "item": "餐饮津贴",
+          "value": 0,
+          "wage_item_code": "2010",
+          "currency": "CNY"
+        },
+        {
+          "item": "机场补贴",
+          "value": 0,
+          "wage_item_code": "2030",
+          "currency": "CNY"
+        }
+      ],
+      "class": "津贴",
+      "currency": "CNY"
+    },
+    {
+      "total": 1050,
+      "detail": [
+        {
+          "item": "医疗保险-员工",
+          "value": 120,
+          "wage_item_code": "4012",
+          "currency": "CNY"
+        },
+        {
+          "item": "失业保险-员工",
+          "value": 30,
+          "wage_item_code": "4013",
+          "currency": "CNY"
+        },
+        {
+          "item": "住房公积金-员工",
+          "value": 420,
+          "wage_item_code": "4016",
+          "currency": "CNY"
+        },
+        {
+          "item": "养老保险-员工",
+          "value": 480,
+          "wage_item_code": "4011",
+          "currency": "CNY"
+        }
+      ],
+      "class": "社保公积金",
+      "currency": "CNY"
+    },
+    {
+      "total": 0,
+      "detail": [
+        {
+          "item": "独生子女费",
+          "value": 0,
+          "wage_item_code": "2035",
+          "currency": "CNY"
+        },
+        {
+          "item": "迟到扣款",
+          "value": 0,
+          "wage_item_code": "9320",
+          "currency": "CNY"
+        }
+      ],
+      "class": "其他收入",
+      "currency": "CNY"
+    },
+    {
+      "total": 0,
+      "detail": [
+        {
+          "item": "病假扣款",
+          "value": 0,
+          "wage_item_code": "9210",
+          "currency": "CNY"
+        },
+        {
+          "item": "长病假扣款",
+          "value": 0,
+          "wage_item_code": "9220",
+          "currency": "CNY"
+        },
+        {
+          "item": "事假扣款",
+          "value": 0,
+          "wage_item_code": "9200",
+          "currency": "CNY"
+        },
+        {
+          "item": "旷工扣款",
+          "value": 0,
+          "wage_item_code": "9230",
+          "currency": "CNY"
+        }
+      ],
+      "class": "其他扣款",
+      "currency": "CNY"
+    },
+    {
+      "total": 228.6,
+      "detail": [
+        {
+          "item": "工资税",
+          "value": 228.6,
+          "wage_item_code": "0505",
+          "currency": "CNY"
+        }
+      ],
+      "class": "个税",
+      "currency": "CNY"
+    },
+    {
+      "total": 6521.4,
+      "detail": [
+        {
+          "item": "本月净收入",
+          "value": 6521.4,
+          "wage_item_code": "0805",
+          "currency": "CNY"
+        }
+      ],
+      "class": "总计",
+      "currency": "CNY"
+    }
+  ]
+}

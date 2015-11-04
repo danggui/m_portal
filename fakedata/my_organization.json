@@ -1,0 +1,84 @@
+{
+  "status": "0/1",
+  "message": "error/success",
+  "data": {
+    "superior": [
+      {
+        "po_id": "1000",
+        "po_name": "研发部经理",
+        "ee_name": "A",
+        "department": "Solution",
+        "is_manager": "1/0",
+        "photo": "http://www.poluoluo.com/jzxy/UploadFiles_333/201210/2012100517055378.jpg"
+      },
+      {
+        "po_id": "2000",
+        "po_name": "架构组组长",
+        "ee_name": "B",
+        "department": "PDC",
+        "is_manager": "1/0",
+        "photo": "http://ah.people.com.cn/NMediaFile/2012/0612/LOCAL201206120812000131048773472.jpg"
+      },
+      {
+        "po_id": "3000",
+        "po_name": "助理工程师",
+        "ee_name": "C",
+        "department": "CTC",
+        "is_manager": "1/0",
+        "photo": "http://h.hiphotos.baidu.com/zhidao/pic/item/024f78f0f736afc3967a03ffb319ebc4b7451231.jpg"
+      }
+    ],
+    "equal": [
+      {
+        "po_id": "2000",
+        "po_name": "架构组组长",
+        "ee_name": "B",
+        "department": "PDC",
+        "is_manager": "1/0",
+        "photo": "http://ah.people.com.cn/NMediaFile/2012/0612/LOCAL201206120812000131048773472.jpg"
+      },
+      {
+        "po_id": "1000",
+        "po_name": "研发部经理",
+        "ee_name": "A",
+        "department": "Solution",
+        "is_manager": "1/0",
+        "photo": "http://www.poluoluo.com/jzxy/UploadFiles_333/201210/2012100517055378.jpg"
+      },
+      {
+        "po_id": "3000",
+        "po_name": "助理工程师",
+        "ee_name": "C",
+        "department": "CTC",
+        "is_manager": "1/0",
+        "photo": "http://h.hiphotos.baidu.com/zhidao/pic/item/024f78f0f736afc3967a03ffb319ebc4b7451231.jpg"
+      }
+    ],
+    "subordinate": [
+      {
+        "po_id": "2000",
+        "po_name": "架构组组长",
+        "ee_name": "B",
+        "department": "PDC",
+        "is_manager": "1/0",
+        "photo": "http://ah.people.com.cn/NMediaFile/2012/0612/LOCAL201206120812000131048773472.jpg"
+      },
+      {
+        "po_id": "1000",
+        "po_name": "研发部经理",
+        "ee_name": "A",
+        "department": "Solution",
+        "is_manager": "1/0",
+        "photo": "http://www.poluoluo.com/jzxy/UploadFiles_333/201210/2012100517055378.jpg"
+      },
+      {
+        "po_id": "3000",
+        "po_name": "助理工程师",
+        "ee_name": "C",
+        "department": "CTC",
+        "is_manager": "1/0",
+        "photo": "http://h.hiphotos.baidu.com/zhidao/pic/item/024f78f0f736afc3967a03ffb319ebc4b7451231.jpg"
+      }
+    ]
+  }
+}

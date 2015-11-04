@@ -1,0 +1,8 @@
+﻿<ul class="ct-ui-tab-mod">
+  <%for(var i = 0, len = data.length; i < len; i++) { %>
+  <li data-key="<%=data[i].id %>" data-index="<%=i%>" <%if(i == index){ %>class=" <%=curClass %>"
+    <%} %>>
+    <%=data[i].name %></li>
+  <%} %>
+  <i class="ct-ui-tab-scrollbar ct-ui-tabnum<%=len %>"></i>
+</ul>

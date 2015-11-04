@@ -1,0 +1,19 @@
+<div id="header" class="header">
+    <header>
+        <h2 id="policy-title"></h2>
+    </header>
+</div>
+
+<section class="wrapperCss PolicyListBox">
+    <div style="margin: 10px;">
+        <ul class="PolicyListU" id="PolicyListU">
+            <script type="text/template" id="policyList_tp">
+                <%for(var i = 0, len = policy_list_data.length; i < len; i++) { %>
+                <li class="policy-item-list" policy-id="<%= policy_list_data[i].src %>">•&nbsp;<%= policy_list_data[i].title %></li>
+                <% } %>
+            </script>
+        </ul>
+    </div>
+
+
+</section>

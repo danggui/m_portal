@@ -1,0 +1,48 @@
+<div id="header" class="header">
+  <header>
+    <h2 id="myinfo-title"></h2>
+  </header>
+</div>
+<section class="holder" style="background: white">
+  <div class="form-group form-group-myinfo">
+       <div id="photo_info_wrap" class="form-group-myinfo-left"></div>
+       <div id="mybasic_info_wrap" class="form-group-myinfo-right"></div>
+  </div>
+    <ul class="ctui-itmes">
+        <div class="ctui-t">
+            <span class="label" id="myinfo-sub-title" style=""></span>
+        </div>
+    </ul>
+  <div id="outline_info_wrap">
+    <script type="text/template" id="outline_info_tpl">
+      <ul class="form-item-list form-group-nospacing padding-li">
+        <%for(var i = 0, len = data.length; i < len; i++) { %>
+          <% if(data[i].editable){ %>
+        <li id="<%=data[i].code%>" class="form-item-li myInfo-edit-detail" style="float: left;width: 100%;" data-title="<%=data[i].title%>" data-id="<%=data[i].code%>">
+            <img src="./images/icons/right_arrow.png" width="10px" height="15px" style="float: right;margin:3px 0 3px 10px;">
+            <% }else{ %>
+          <li class="form-item-li" style="float: left;width: 100%;">
+            <% }%>
+          <span class="label" style="width: 35%;"><b style="color: black"><%=data[i].title%></b></span>
+          <div id="<%=data[i].code+'_value'%>" class="pull-right" style="width: 55%;display: block;word-wrap: break-word;word-break: normal;text-align: right">
+            <%=data[i].value%>
+          </div>
+        </li>
+        <%}%>
+      </ul>
+    </script>
+  </div>
+</section>
+<script type="text/template" id="photo_info_tpl">
+    <img id="headPortrait" src="<%=photo_infoData.value%>" width="60px" height="60px" style="vertical-align: middle;margin:5px;-moz-border-radius: 30px;-webkit-border-radius:30px;">
+</script>
+<script type="text/template" id="mybasic_info_tpl">
+    <%for(var i = 0, len = basic_infoData.length; i < len; i++) { %>
+    <% if(basic_infoData[i].editable){ %>
+    <div id="<%=basic_infoData[i].code+'_value'%>" class="form-group-myinfo-text myInfo-edit-detail" data-title="<%=basic_infoData[i].title%>" data-id="<%=basic_infoData[i].code%>">
+        <e><%=basic_infoData[i].value%></e><img src="./images/icons/right_arrow.png" width="10px" height="15px" style="float: right;margin:3px 0 3px 10px;">
+    </div>
+    <% }else{ %>
+    <div class="form-group-myinfo-text"><%=basic_infoData[i].value%></div>
+    <% }}%>
+</script>

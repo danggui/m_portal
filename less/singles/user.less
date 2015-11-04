@@ -1,0 +1,164 @@
+/** Libraries */
+@import "../lib/_lesshat";
+@import "../lib/_retina";
+
+/** Settings */
+@import "../settings/_variables";
+@import "../settings/_mixin";
+
+/** Variables */
+@base-width:21%;
+
+.form-item-li{
+  text-align: center;
+  padding: 0 !important;
+
+  span{
+    width: @base-width;
+    height: @line-base+2;
+    .inline-block();
+    padding-right: @gap-h-tiny;
+    color: @color-white;
+    background: @color-gray-lighter;
+    border-radius: @border-radius-sm;
+  }
+
+  input {
+    width: 98-@base-width;
+    height: @line-base+2;
+    font-size: @font-base;
+    color: @color-text;
+    background-color: @input-bg;
+    line-height: @line-base;
+    border-radius: @border-radius-sm;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .auto {
+    float: left;
+    vertical-align: top;
+    color:@color-text;
+    .check{
+      width: 18px;
+      height: 18px;
+      margin: 8px 5px auto 9px;
+    }
+  }
+
+  .forgetpwd{
+    height: @line-base+4;
+    color: @color-text;
+    line-height:  @line-base+4;
+    text-align: center;
+    float: right;
+    .inline-block();
+  }
+}
+
+
+
+
+.inter_list{
+  border: 1px solid #d8d8d8;
+  background-color: #FFF;
+}
+
+.inter_list li{
+  position: relative;
+  padding-left: 10px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.inter_list .title{
+  background-color: #F7F7F7;
+  height: 34px;
+  line-height: 34px;
+}
+
+.inter_list .i_content{
+  margin-left: 23px;
+}
+
+.i_one,.i_two,.i_three,.i_four{
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 7px;
+}
+.i_one,.i_three{
+  background: url("../images/icons/phone_icon.png") 0 0 no-repeat;
+  background-size: 18px 18px;
+}
+.i_two,.i_four{
+  background: url("../images/icons/mail_icon.png") 0 0 no-repeat;
+  background-size: 18px 18px;
+}
+#login_lay {
+  background-color: #000;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+  display: none;
+}
+
+#login_lay_frm1 {
+  z-index: 1000;
+  left: 0;
+  top: 200px;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+#login_lay_frm1 .frm {
+  background-color: #000;
+  color: #fff!important;
+  font-family: inherit;
+  width: 230px;
+  height: 100px;
+  margin: auto;
+  opacity: 0.7;
+  border-radius: 5px;
+}
+
+#login_lay_frm1 .tips {
+  height: 63px;
+  border-bottom: 1px solid #6e6e6e;
+  font-size: 15px;
+  line-height: 63px;
+  vertical-align: top;
+  background-size: 30px 30px;
+  text-align: center;
+}
+
+#login_lay_frm1 .btns .btn {
+  height: 36px;
+  line-height: 36px;
+  background: none;
+  background-color: none;
+  float: left;
+  display: inline-block;
+  font-weight: normal;
+  text-align: center;
+  cursor: pointer;
+}
+
+#login_lay_frm1 .btns #forget {
+  width: 115px;
+  border-right: 1px solid #6e6e6e;
+  border-radius: 0;
+}
+
+#login_lay_frm1 .btns #back {
+  width: 114px;
+}

@@ -1,0 +1,291 @@
+/*
+    add by patirck  2014/9/9
+*/
+@charset "utf-8";
+/*用户中心登录页begin*/
+body{
+	background-color: #eee;
+	color: #444;
+}
+a{
+	color: #444;
+}
+.form{
+  margin: 0 auto;
+  padding: 50px 19px;
+  overflow: hidden;
+}
+.login .form{
+  text-align: center;
+}
+.login .sign{
+	margin-bottom: 14px;
+}
+.sign #btn_moblogin{
+	line-height: 34px;
+	font-size: 12px;
+	color: #a1a1a1;
+	background-color: transparent;
+	float: right;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+.login #frm_login{
+  width:100%;
+  height: 100%;
+}
+.login .user-info{
+	width: 100%;
+	height: 32px;
+  margin-bottom: 0.14em;
+}
+
+.login .user-info input{
+	width: 78%;
+	height: 32px;
+	font-size: 12px;
+	color: #afafaf;
+	background-color: #FFF;
+	line-height: 32px;
+  border-radius: 0.2em;
+}
+
+.login .user-info span{
+  width: 21%;
+  height: 28px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  padding-top:5px;
+  padding-right: 2px;
+  background: #ABABAB;
+  border-radius: 0.2em;
+}
+.login ul{
+list-style: none;
+padding: 9px;
+margin: 0px;
+}
+
+.login li .auto{
+color: #7d7d7d;
+vertical-align: top;
+line-height: 34px;
+float: left;
+display: inline-block;
+*display: inline;
+*zoom: 1;
+}
+.login .enter{
+  width: 100%;
+  margin-top: 14px;
+}
+.login .enter a{
+  width: 97%;
+  height: 34px;
+  display: block;
+  color:#dad4cf;
+  line-height: 34px;
+  margin: 0 auto;
+  border-radius: 2px;
+  background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0%, rgba(250, 6, 6, 0.79)),color-stop(100%, #971b0d));
+  background-image: -webkit-linear-gradient(rgba(250, 6, 6, 0.79),#971b0d);
+  background-image: -moz-linear-gradient(rgba(250, 6, 6, 0.79),#971b0d);
+  background-image: -o-linear-gradient(rgba(250, 6, 6, 0.79),#971b0d);
+  background-image: linear-gradient(rgba(250, 6, 6, 0.79),#971b0d);
+}
+
+.auto .check{
+width: 18px;
+height: 18px;
+margin: 8px 5px auto 9px;
+}
+.login li .forgetpwd{
+width: 82px;
+	height: 34px;
+	color: #7c7c7c;
+	line-height: 34px;
+	text-align: center;
+	float: right;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+.inter_list{
+  border: 1px solid #d8d8d8;
+  background-color: #FFF;
+}
+
+.inter_list li{
+  position: relative;
+  padding-left: 10px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.inter_list .title{
+  background-color: #F7F7F7;
+  height: 34px;
+  line-height: 34px;
+}
+
+.inter_list .i_content{
+  margin-left: 23px;
+}
+
+.i_one,.i_two,.i_three,.i_four{
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 7px;
+}
+.i_one,.i_three{
+  background: url("../images/icons/phone_icon.png") 0 0 no-repeat;
+  background-size: 18px 18px;
+}
+.i_two,.i_four{
+  background: url("../images/icons/mail_icon.png") 0 0 no-repeat;
+  background-size: 18px 18px;
+}
+#login_lay {
+  background-color: #000;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+  display: none;
+}
+
+#login_lay_frm1 {
+  z-index: 1000;
+  left: 0;
+  top: 200px;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+#login_lay_frm1 .frm {
+  background-color: #000;
+  color: #fff!important;
+  font-family: inherit;
+  width: 230px;
+  height: 100px;
+  margin: auto;
+  opacity: 0.7;
+  border-radius: 5px;
+}
+
+#login_lay_frm1 .tips {
+  height: 63px;
+  border-bottom: 1px solid #6e6e6e;
+  font-size: 15px;
+  line-height: 63px;
+  vertical-align: top;
+  background-size: 30px 30px;
+  text-align: center;
+}
+
+#login_lay_frm1 .btns .btn {
+  height: 36px;
+  line-height: 36px;
+  background: none;
+  background-color: transparent;
+  float: left;
+  display: inline-block;
+  font-weight: normal;
+  text-align: center;
+  cursor: pointer;
+}
+
+#login_lay_frm1 .btns #forget {
+  width: 115px;
+  border-right: 1px solid #6e6e6e;
+  border-radius: 0;
+}
+
+#login_lay_frm1 .btns #back {
+  width: 114px;
+}
+
+@media only screen and (max-width: 480px) and (min-width: 360px){
+  .sub-viewport,.form {
+    max-width: 480px;
+  }
+  .inter_list li {
+    padding-left: 10px;
+  }
+}
+
+@media only screen and (min-width: 480px){
+  .inter_list li {
+    padding-left: 36px;
+  }
+}
+
+@media only screen and (max-width: 360px) and (min-width: 350px){
+  .sub-viewport,.form {
+    max-width: 360px;
+  }
+  .inter_list li {
+    padding-left: 10px;
+  }
+}
+
+ @media only screen and (max-width: 360px) and (min-width: 320px){
+   .sub-viewport,.form {
+     max-width: 360px;
+   }
+   .inter_list li {
+     padding-left: 10px;
+   }
+ }
+
+.form .tip{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.form span{
+  display: block;
+}
+
+.form #content{
+  margin-top: 2.12em;
+  margin-bottom: 4.34em;
+}
+
+.form #content input{
+  width: 100%;
+  height: 32px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  margin-bottom: 0.14em;
+}
+
+.form #confirm,.form #contact{
+  width: 95%;
+  height: 34px;
+  display: block;
+  color:#dad4cf;
+  line-height: 34px;
+  margin: 0 auto;
+  margin-top: 2px;
+  background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0%, rgba(250, 6, 6, 0.79)),color-stop(100%, #971b0d));
+  background-image: -webkit-linear-gradient(rgba(250, 6, 6, 0.79),#971b0d);
+  background-image: -moz-linear-gradient(rgba(250, 6, 6, 0.79),#971b0d);
+  background-image: -o-linear-gradient(rgba(250, 6, 6, 0.79),#971b0d);
+  background-image: linear-gradient(rgba(250, 6, 6, 0.79),#971b0d);
+  text-align: center;
+  border-radius: 2px;
+}

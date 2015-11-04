@@ -1,0 +1,35 @@
+﻿<section class="ct-ui_cldunit">
+<%for(var j = 0; j < displayMonthNum; j++) { %>
+<%
+  var changedMonth = month + j;
+  var yyy =  parseInt(( month + j ) / 12);
+  if(changedMonth > 11) {
+    changedMonth = changedMonth - 12 * yyy;
+  }
+  changedYear = year + yyy;
+  var d = new Date(changedYear, changedMonth);
+  var days = _.dateUtil.getDaysOfMonth(d);
+  var beginWeek = _.dateUtil.getBeginDayOfMouth(d);
+%>
+  <h1 class="ct-ui_cldmonth">
+    <i class="previous i_bef" data-date="<%=changedYear%>-<%=parseInt(changedMonth)%>"></i>
+    <%=MonthClapFn(changedYear, changedMonth) %>
+    <i class="next i_bef" data-date="<%=changedYear%>-<%=parseInt(changedMonth)+2%>"></i>
+  </h1>
+  <ul class="ct-ui_cldweek" style=" position: static; ">
+    <% var i = 0, day1 = 0;  %>
+    <%for(day1 = 0; day1 < 7; day1++) { %>
+    <li><%=weekDayArr[day1] %></li>
+    <%} %>
+  </ul>
+  <ul class="ct-ui_cld_daybox">
+     <% for(i = 0; i < beginWeek; i++) { %>
+        <li class="ct-ui_invalid">&nbsp;</li>
+      <% } %>
+      <% for(i = 0; i < days; i++) { %>
+        <%var day = i + 1; %>
+        <li class="ct-ui_calendar_item <% if(curTime == new Date(changedYear, changedMonth, day ).getTime()) { %> ct-ui_cld_day_NOW <%} %>"data-date="<%=changedYear%>-<%=changedMonth+1%>-<%=day%>"><%=dayItemFn(changedYear, changedMonth, day)%> </li>
+      <% } %>
+  </ul>
+<%} %>
+</section>

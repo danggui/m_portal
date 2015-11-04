@@ -1,0 +1,24 @@
+<div id="header" class="header">
+  <header>
+    <h2 id="newlist-title"></h2>
+  </header>
+</div>
+<section id="newsList_wrap" class="wrapperCss" style="position: absolute;width: 100%;z-index: 1;left: 0;top: 48px;bottom: 0;overflow: auto;background: rgb(221, 221, 221)">
+  <div id="scroller" class="scrollerCss holder">
+    <div id="pullDown" style="display: block"><div class="flight-loading flight-reloading"><div class="cui-i cui-w-loading"></div><div class="cui-i cui-m-logo"></div></div><span class="pullDownLabel" style="width: 150px; position:relative;font-size:12px; "></span></div>
+    <script type="text/template" id="newsList_tpl">
+    <%for(var i = 0, len = news_list_data.length; i < len; i++) { %>
+    <ul class="form-item-list form-group-nospacing newsList" news-id="<%=news_list_data[i].id%>">
+      <li class="form-item-li form-item-li-nopadding">
+        <span class="avator"><img src="<%=news_list_data[i].img%>"/></span>
+        <div class="main-body">
+          <span class="form-label title"><%=news_list_data[i].title%></span>
+          <span class="content"><%=news_list_data[i].content%></span>
+        </div>
+      </li>
+    </ul>
+    <%}%>
+  </script>
+  </div>
+  <div style="height:4.65em;width:100%"></div>
+</section>

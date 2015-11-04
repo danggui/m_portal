@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="-1">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+  <meta name="format-detection" content="telephone=no">
+  <title>Micro Cloud</title>
+  <link rel="stylesheet" href="css/lib/prism.css?16439">
+  <link rel="stylesheet" href="css/base.min.css?16439">
+  <link rel="stylesheet" href="css/guide.min.css?16439">
+
+</head>
+<body>
+</body>
+<!-- build:js js/app/lib/lib.min.js?16439"-->
+<script src="js/thrd_lib/requirejs/require.js?16439"></script>
+<script src="js/thrd_lib/zepto/zepto.js?16439"></script>
+<script src="js/thrd_lib/underscore/underscore.js?16439"></script>
+<script src="js/thrd_lib/underscore/underscore.extend.js?16439"></script>
+<script src="js/thrd_lib/zepto/fastclick.js?16439"></script>
+<script src="js/thrd_lib/prism.js?16439"></script>
+<!-- endbuild -->
+
+<!-- build:js js/app/global.min.js?16439-->
+<script src="js/js_constant.js?16439"></script>
+<script src="js/common.js?16439"></script>
+<!-- endbuild -->
+<script>
+  (function (w,d) {
+    window.getGuideViewTemplatePath = function (path) {
+      return 'text!'+jsapp.js_path+'guide_templates/' + path + '.html';
+    };
+
+    var animations = {
+      slideleft: function (inView, outView, callback) {
+        var self = this;
+        inView.$el.addClass('animatestart');
+        inView.show();
+
+        inView.$el.css({
+          '-webkit-transform': 'translate3d(100%, 0px, 0px)',
+          '-moz-transform': 'translate3d(100%, 0px, 0px)'
+        });
+
+        inView.$el.animate({
+          '-webkit-transform': 'translate3d(0px, 0px, 0px)',
+          '-moz-transform': 'translate3d(0px, 0px, 0px)'
+        }, 300, 'linear', function () {
+          inView.$el.removeAttr('style');
+          outView.$el.removeAttr('style');
+
+          inView.$el.removeClass('animatestart');
+          inView.$el.removeAttr('style');
+          outView.$el.removeAttr('style');
+          outView.hide();
+
+          callback && callback.call(self, inView, outView);
+
+        });
+
+      },
+
+      slideright: function (inView, outView, callback) {
+        var self = this;
+        inView.show();
+        outView.$el.addClass('animatestart');
+        outView.$el.css({
+          '-webkit-transform': 'translate3d(0%, 0px, 0px)',
+          '-moz-transform': 'translate3d(0%, 0px, 0px)'
+        });
+
+        outView.$el.animate({
+          '-webkit-transform': 'translate3d(100%, 0px, 0px)',
+          '-moz-transform': 'translate3d(100%, 0px, 0px)'
+        }, 300, 'linear', function () {
+          inView.$el.removeAttr('style');
+          outView.$el.removeAttr('style');
+
+          outView.$el.removeClass('animatestart');
+          outView.hide();
+
+          callback && callback.call(self, inView, outView);
+
+        });
+      },
+
+      slideleft: function (inView, outView, callback, scope) {
+        $('body').addClass('hiddenx');
+        inView.$el.addClass('animatestart');
+        inView.$el.addClass('sliderightin');
+
+        inView.show();
+
+        inView.$el.one('webkitAnimationEnd transitionend oTransitionEnd', function () {
+          $('body').removeClass('hiddenx');
+          inView.$el.removeClass('animatestart');
+          inView.$el.removeClass('sliderightin');
+
+          outView.hide();
+
+          callback && callback.call(scope, inView, outView);
+
+        }, 340);
+      },
+
+      slideright: function (inView, outView, callback, scope) {
+        $('body').addClass('hiddenx');
+
+        outView.$el.addClass('animatestart');
+        outView.$el.addClass('sliderightout');
+
+        inView.show();
+
+        outView.$el.one('webkitAnimationEnd transitionend oTransitionEnd', function () {
+          $('body').removeClass('hiddenx');
+          outView.$el.removeClass('animatestart');
+          outView.$el.removeClass('sliderightout');
+          outView.hide();
+
+          callback && callback.call(scope, inView, outView);
+
+        }, 340);
+      }
+    };
+
+    require(['AbstractApp'], function (App) {
+      //实例化App
+      var app = new App({
+        //选择pushState还是hashChange
+        hasPushState: false,
+        'defaultView': 'guide',
+        'viewRootPath': jsapp.js_path+'guideviews/',
+        animations: animations
+      });
+      $.bindFastClick && $.bindFastClick();
+
+    });
+  })(window,document);
+</script>
+
+</html>
