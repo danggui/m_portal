@@ -10,9 +10,7 @@ define(['NavView',getViewTemplatePath('MyProfile'),'UItreeMenu','UserCenterInfoM
 
     onCreate: function () {
       this.$el.html(viewhtml);
-        this.$("#self-service").append(_.template(this.$("#basic_info_tp0").html())({'lanStore':lanStore.getAttr('language')}));
-        $("#treePWD")[0].innerHTML = lanStore.getAttr('language').passwordSettings;
-        $("#treelogOut")[0].innerHTML = lanStore.getAttr('language').logOut;
+        $('#myinfo-selfService')[0].innerHTML = lanStore.getAttr('language').selfService;
 
 
       this.els = {
@@ -25,7 +23,6 @@ define(['NavView',getViewTemplatePath('MyProfile'),'UItreeMenu','UserCenterInfoM
         });
       }
 
-      //this.$('.ct-main-content').empty();
       var that = this;
       this.loading1.show();
 //      $.ajax({
@@ -42,11 +39,34 @@ define(['NavView',getViewTemplatePath('MyProfile'),'UItreeMenu','UserCenterInfoM
 //        }
 //      });
 
+        var menuData =  [
+            {
+                "app_resource_code": "01",
+                "describe_en_us": "Employee",
+                "describe_zh_cn": "我是员工"
+            },
+            {
+                "app_resource_code": "02",
+                "describe_en_us": "My Payslip",
+                "describe_zh_cn": "我是HR"
+            }
+        ]
 
-//          var myprofile_menudata = [];
-//          _.each(data.menu_info,function(value, key, list){
-//            myprofile_menudata.push(UserCenterInfoModel.viewMenuInfoModel(value.app_resource_code,value.describe_zh_cn,[]));
-//          });
+          var myprofile_menudata = [];
+          _.each(menuData,function(value, key, list){
+            myprofile_menudata.push(UserCenterInfoModel.viewMenuInfoModel(value.app_resource_code,value.describe_zh_cn,[]));
+          });
+            myprofile_menudata.push(UserCenterInfoModel.viewMenuInfoModel('11','设置',[
+            {
+            "id": "13",
+            "text": "密码重置",
+            "url": "changePwd"
+            },
+            {
+              "id": "19",
+              "text": "退出系统",
+              "url": "index"
+            }]));
 //          myprofile_menudata.push(UserCenterInfoModel.viewMenuInfoModel('11','设置',[
 //            {
 //            "id": "13",
@@ -78,65 +98,65 @@ define(['NavView',getViewTemplatePath('MyProfile'),'UItreeMenu','UserCenterInfoM
 //              "text": "退出系统",
 //              "url": "index"
 //            }]));
-//          this.tree_menu = new UItreeMenu({
-//            datamodel: {
-//              data: myprofile_menudata
-//            },
-//
-//            wrapper: this.$(".ct-main-content"),
-//
-//            scrollWrapper: this.$('.ct-main_menu'),
-//
-//            scrollScroller: this.$(".ct-main-content"),
-//
-//            itemClick: function (e) {
-//              var trigger = $(e.currentTarget);
-//              if(trigger.attr('target')!=''){
-//                $('body').toggleClass("overflow-h");
-//                $('#main').toggleClass("overflow-h");
-//                that.forward(trigger.attr('target'));
-//              }
-//            },
-//
-//            // Load page
-//            itemleafClick: function (e){
-//              var trigger = $(e.currentTarget);
-//              if(trigger.attr('data-leaf-id') == '18'){
-//                window.location.href = trigger.attr('target');
-//              }else if(trigger.attr('data-leaf-id') == '19'){
-//                        var loginOut = LoginOutModel.getInstance();
-//                  loginOut.execute(
-//                      function(data) {
-//                          if(data.status == "0"){
-//                              this.toast1.showToast(data.message);
-//                              return false;
-//                          }else{
-//                              //$(".ct-main_a").toggleClass("ct-main");
-//                              $('header').toggleClass("ct-h-position");
-//                              $(".ct-main_menu").toggleClass("ct-main-m");
-//                              $('body').toggleClass("overflow-h");
-//                              that.forward(trigger.attr('target'));
-//                          }
-//                      },
-//                      function(e){
-//                          console.log(e);
-//                          //todo with error information
-//                      },
-//                      this,
-//                      function(e){},
-//                      {}
-//                  );
-//              }else{
-//                if(trigger.attr('target')!=''){
-//                  $('body').toggleClass("overflow-h");
-//                  $('#main').toggleClass("overflow-h");
-//                  that.forward(trigger.attr('target'));
-//                }
-//              }
-//            }
-//          });
-//          this.tree_menu.show();
-//          this.$('.ct-main_menu').hide();
+          this.tree_menu = new UItreeMenu({
+            datamodel: {
+              data: myprofile_menudata
+            },
+
+            wrapper: this.$(".ct-main-content"),
+
+            scrollWrapper: this.$('.ct-main_menu'),
+
+            scrollScroller: this.$(".ct-main-content"),
+
+            itemClick: function (e) {
+              var trigger = $(e.currentTarget);
+              if(trigger.attr('target')!=''){
+                $('body').toggleClass("overflow-h");
+                $('#main').toggleClass("overflow-h");
+                that.forward(trigger.attr('target'));
+              }
+            },
+
+            // Load page
+            itemleafClick: function (e){
+              var trigger = $(e.currentTarget);
+              if(trigger.attr('data-leaf-id') == '18'){
+                window.location.href = trigger.attr('target');
+              }else if(trigger.attr('data-leaf-id') == '19'){
+                        var loginOut = LoginOutModel.getInstance();
+                  loginOut.execute(
+                      function(data) {
+                          if(data.status == "0"){
+                              this.toast1.showToast(data.message);
+                              return false;
+                          }else{
+                              $(".ct-main_a").toggleClass("ct-main");
+                              $('header').toggleClass("ct-h-position");
+                              $(".ct-main_menu").toggleClass("ct-main-m");
+                              $('body').toggleClass("overflow-h");
+                              that.forward(trigger.attr('target'));
+                          }
+                      },
+                      function(e){
+                          console.log(e);
+                          //todo with error information
+                      },
+                      this,
+                      function(e){},
+                      {}
+                  );
+              }else{
+                if(trigger.attr('target')!=''){
+                  $('body').toggleClass("overflow-h");
+                  $('#main').toggleClass("overflow-h");
+                  that.forward(trigger.attr('target'));
+                }
+              }
+            }
+          });
+          this.tree_menu.show();
+          this.$('.ct-main_menu').hide();
           if(that.$('.ct-main_menu').hasClass('ct-main-m')){
             $('body').removeClass("overflow-h");
             $('#main').removeClass("overflow-h");
@@ -157,8 +177,8 @@ define(['NavView',getViewTemplatePath('MyProfile'),'UItreeMenu','UserCenterInfoM
         'click #newsInfo':'view_news',
         'click #policyInfo':'view_policy',
         'click #insurance':'view_insurance',
-//      'click .icon_menu': 'toggleLeftMenu',
-      'click .icon_menu': 'toggleSettingsMenu',
+      'click .icon_menu': 'toggleLeftMenu',
+//      'click .icon_menu': 'toggleSettingsMenu',
       'click #work_todo':'work_todo',
         'click #toDoList':'toDoList',
       'click #work_hint':'work_hint',
@@ -172,8 +192,14 @@ define(['NavView',getViewTemplatePath('MyProfile'),'UItreeMenu','UserCenterInfoM
         'click #leaveInfo':'leaveInfo',
       'click #fq':'fq',
       'click .list-item-nav':'jump_settingsPage',
-        'click .settings-mask-black':'toggleSettingsMenu'
+        'click .settings-mask-black':'toggleSettingsMenu',
+        'click .trigger':'triggerMenu'
     },
+
+      triggerMenu:function(){
+          event.preventDefault();
+            console.log('111');
+      },
 
 
       view_salary: function(){
@@ -194,10 +220,10 @@ define(['NavView',getViewTemplatePath('MyProfile'),'UItreeMenu','UserCenterInfoM
       toggleLeftMenu: function () {
           this.$(".ct-main_a").toggleClass("ct-main");
           this.$('header').toggleClass("ct-h-position");
-//        this.$(".ct-main_menu").show();
+          this.$(".ct-main_menu").show();
           this.$(".ct-main_menu").toggleClass("ct-main-m");
           $('body').toggleClass("overflow-h");
-          //$('#main').toggleClass("overflow-h");
+          $('#main').toggleClass("overflow-h");
       },
       toggleSettingsMenu:function(){
           this.$('.settings-nav').toggleClass("settings-nav-hide");
@@ -319,10 +345,6 @@ define(['NavView',getViewTemplatePath('MyProfile'),'UItreeMenu','UserCenterInfoM
                         function(e){},
                         {}
                     );
-        var myProfileStore = MyProfileStore.getInstance();
-        var data =  JSON.parse(myProfileStore.getAttr('myProfileStore'));
-        $("#basic_info_wrap").html(_.template(this.els.basicInfo_tpl.html())({'basic_infoData':data.menu_info}));
-        //window.localStorage.setItem("commercialInsurance", data.menu_info[4].content);
 
       //如果菜单栏打开高度滚动关闭
       if(!this.$('.ct-main_menu').hasClass('ct-main-m')){

@@ -49,16 +49,8 @@ define(['AbstractModel'],function(AbstractModel){
 
   modelClass.viewMenuInfoModel = function(id,text,children){
     var mapMenu = [
-      {'id':'01','url':'MyInfo'},
-      {'id':'02','url':'ViewSalary'},
-      {'id':'03','url':'MyWork_calander'},
-      {'id':'04','url':'MyBalance'},
-      {'id':'06','url':'MyApply_List'},
-      {'id':'07','url':'MyWork_List'},
-      {'id':'08','url':'MyOrganize'},
-      {'id':'09','url':'MyWork_calander'},
-      {'id':'10','url':'Policy'},
-      {'id':'12','url':'MyDashboard'}],url='';
+      {'id':'01','url':'Employee'},
+      {'id':'02','url':'HR'}],url='';
     _.each(mapMenu,function(value){
       if(value.id == id)
         url = value.url;
