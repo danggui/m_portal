@@ -26,7 +26,7 @@ define(['UIView',getViewTemplatePath('ui/ui.treeMenu'),'UIScroll'],function(UIVi
     },
 
     events:{
-      'click .trigger': 'itemClickAction',
+     // 'click .trigger': 'itemClickAction',
       'click .triggerLeaf': 'itemleafClickAction'
     },
     // Events

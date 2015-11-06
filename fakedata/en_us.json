@@ -112,6 +112,7 @@
         "saveSuccess":"Save success",
         "saveFailed":"Save failed",
         "uploadWin":"Upload success",
-        "uploadFail":"Upload failed"
+        "uploadFail":"Upload failed",
+        "staffList":"Staff list"
     }
 }

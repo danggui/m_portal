@@ -55,6 +55,7 @@
       'AnnualLeaveModel':jsapp.js_path+'model/AnnualLeaveModel',
       'LeaveDaysModel':jsapp.js_path+'model/LeaveDaysModel',
       'DoLeaveApplyModel':jsapp.js_path+'model/DoLeaveApplyModel',
+      'HRempListModel':jsapp.js_path+'model/HRempListModel',
       //store
       'abstractStorage':jsapp.js_path+'mvc/abstractStorage',
       'storage':jsapp.js_path+'mvc/storage',

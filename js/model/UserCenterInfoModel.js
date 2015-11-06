@@ -3,7 +3,7 @@ define(['AbstractModel'],function(AbstractModel){
 
     propertys: function ($super) {
       $super();
-      this.url = "micro/platform/getIndexInfo";
+      this.url = "portal/platform/getIndexInfo";
 //      this.url = "fakedata/user_center_info.json";
       this.param = {};
       this.dataformat = null;
@@ -29,28 +29,20 @@ define(['AbstractModel'],function(AbstractModel){
   //单例模式
   var modelClass = {};
 
-  modelClass.viewBasicInfoModel = function(role_id,po_id,ou_name,ee_head,ee_name,ou_id,sip,ee_id,email,user_id,po_name,client_name,mobile){
+  modelClass.viewBasicInfoModel = function(content,title,extra,code){
     return {
-      role_id: role_id,
-      po_id: po_id,
-      ou_name:ou_name,
-      ee_head:ee_head,
-      ee_name:ee_name,
-      ou_id:ou_id,
-      sip:sip,
-      ee_id:ee_id,
-      email:email,
-      user_id:user_id,
-      po_name:po_name,
-      client_name:client_name,
-      mobile:mobile
+      content: content,
+      title: title,
+      extra:extra,
+      code:code
     }
   };
 
   modelClass.viewMenuInfoModel = function(id,text,children){
     var mapMenu = [
       {'id':'01','url':'Employee'},
-      {'id':'02','url':'HR'}],url='';
+      {'id':'02','url':'HR'}
+    ],url='';
     _.each(mapMenu,function(value){
       if(value.id == id)
         url = value.url;

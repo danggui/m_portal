@@ -421,11 +421,37 @@ h1 {
     margin-bottom: 0em;
   }
 
-  & .salaryInfo_left,& .newsInfo_left, & .policyInfo_left, & .salaryInfo_right, & .newsInfo_right, & .policyInfo_right, & .myInfo_left, & .myInfo_right,& .leaveInfo_left,& .leaveInfo_right,& .toDoList_left,& .toDoList_right{
+  & .salaryInfo_left,& .newsInfo_left, & .policyInfo_left, & .salaryInfo_right, & .newsInfo_right, & .policyInfo_right,
+  & .myInfo_left, & .myInfo_right,& .leaveInfo_left,& .leaveInfo_right,& .toDoList_left,& .toDoList_right,& .empListModule_left,
+  & .empListModule_right,& .empEntryModule_left,& .empEntryModule_right,& .empDimissionModule_left,& .empDimissionModule_right{
     display: inline-block;
     background-size: contain !important;
     width: 50%;
     min-height: 9.4em;
+  }
+  & .empListModule_left{
+    background:@btn-default-bg-light url('../images/news/empListModule_left.png') 0 0 no-repeat;
+    border-radius: 4px 0 0 4px;
+  }
+  & .empListModule_right{
+    background:@btn-default-bg-light;
+    border-radius: 0 4px 4px 0;
+  }
+  & .empEntryModule_left{
+    background:#F3B627 url('../images/news/empEntryModule_left.png') 0 0 no-repeat;
+    border-radius: 4px 0 0 4px;
+  }
+  & .empEntryModule_right{
+    background:#F3B627;
+    border-radius:  0 4px 4px 0;
+  }
+  & .empDimissionModule_left{
+    background:@btn-blue-bg-light url('../images/news/empDimissionModule_left.png') 0 0 no-repeat;
+    border-radius: 4px 0 0 4px;
+}
+  & .empDimissionModule_right{
+    background:@btn-blue-bg-light;
+    border-radius:  0 4px 4px 0;
   }
   & .leaveInfo_left{
     background:#F3B627  url('../images/news/leaveInfo_left.jpg') 0 0 no-repeat;
@@ -493,6 +519,7 @@ h1 {
   .Title{
     font-size: 1.35em;
     line-height: 1.3;
+    color: white;
   }
 
   .Detail{
@@ -580,8 +607,8 @@ h1 {
   .avator{
     position: absolute;
     &  img{
-      width: 6.5em;
-      height: 6.5em
+      width: 3.5em;
+      height: 3.5em
     }
   }
 
@@ -708,7 +735,7 @@ h1 {
   background: rgba(0,0,0,0.5);
   position: fixed;
   width: 100%;
-  height:100%;
+  height:1000px;
   z-index: 999;
 }
 .settings-page{

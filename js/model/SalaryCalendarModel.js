@@ -3,7 +3,7 @@ define(['AbstractModel'],function(AbstractModel){
 
         propertys: function ($super) {
             $super();
-            this.url = "micro/py/getEmployeePayCalendar";
+            this.url = "portal/py/getEmployeePayCalendar";
             this.param = {};
             this.dataformat = null;
             this.validates = [];

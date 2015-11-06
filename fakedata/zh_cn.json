@@ -113,6 +113,7 @@
       "saveSuccess":"保存成功",
       "saveFailed":"保存失败",
       "uploadWin":"上传成功",
-      "uploadFail":"上传失败"
+      "uploadFail":"上传失败",
+      "staffList":"员工一览"
     }
 }

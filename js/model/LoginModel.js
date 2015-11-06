@@ -3,7 +3,7 @@ define(['AbstractModel'],function(AbstractModel){
 
         propertys: function ($super) {
             $super();
-            this.url = "micro/platform/login";
+            this.url = "portal/platform/login";
 //      this.url = "fakedata/user_center_info.json";
             this.param = {};
             this.dataformat = null;

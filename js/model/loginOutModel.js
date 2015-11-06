@@ -4,7 +4,7 @@ define(['AbstractModel'],function(AbstractModel){
 
         propertys: function ($super) {
             $super();
-            this.url = "micro/platform/logout";
+            this.url = "portal/platform/logout";
             this.param = {};
             this.dataformat = null;
             this.validates = [];

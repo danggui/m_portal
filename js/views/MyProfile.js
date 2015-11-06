@@ -53,9 +53,9 @@ define(['NavView',getViewTemplatePath('MyProfile'),'UItreeMenu','UserCenterInfoM
         ]
 
           var myprofile_menudata = [];
-          _.each(menuData,function(value, key, list){
-            myprofile_menudata.push(UserCenterInfoModel.viewMenuInfoModel(value.app_resource_code,value.describe_zh_cn,[]));
-          });
+          //_.each(menuData,function(value, key, list){
+          //  myprofile_menudata.push(UserCenterInfoModel.viewMenuInfoModel(value.app_resource_code,value.describe_zh_cn,[]));
+          //});
             myprofile_menudata.push(UserCenterInfoModel.viewMenuInfoModel('11','设置',[
             {
             "id": "13",
@@ -156,6 +156,7 @@ define(['NavView',getViewTemplatePath('MyProfile'),'UItreeMenu','UserCenterInfoM
             }
           });
           this.tree_menu.show();
+          $(".trigger").next().show()
           this.$('.ct-main_menu').hide();
           if(that.$('.ct-main_menu').hasClass('ct-main-m')){
             $('body').removeClass("overflow-h");
@@ -173,6 +174,7 @@ define(['NavView',getViewTemplatePath('MyProfile'),'UItreeMenu','UserCenterInfoM
         'touchcancel .myDivCard.item,.flex-btn': function(e){
             $(e.currentTarget).removeClass('cur');
         },
+        'click #empListModule':'view_empList',
         'click #salaryInfo':'view_salary',
         'click #newsInfo':'view_news',
         'click #policyInfo':'view_policy',
@@ -192,16 +194,11 @@ define(['NavView',getViewTemplatePath('MyProfile'),'UItreeMenu','UserCenterInfoM
         'click #leaveInfo':'leaveInfo',
       'click #fq':'fq',
       'click .list-item-nav':'jump_settingsPage',
-        'click .settings-mask-black':'toggleSettingsMenu',
-        'click .trigger':'triggerMenu'
+     //'click .settings-mask-black':'toggleSettingsMenu',
     },
-
-      triggerMenu:function(){
-          event.preventDefault();
-            console.log('111');
+      view_empList:function(){
+          this.forward('ViewEmpList');
       },
-
-
       view_salary: function(){
           this.forward('ViewSalary');
       },
@@ -224,12 +221,12 @@ define(['NavView',getViewTemplatePath('MyProfile'),'UItreeMenu','UserCenterInfoM
           this.$(".ct-main_menu").toggleClass("ct-main-m");
           $('body').toggleClass("overflow-h");
           $('#main').toggleClass("overflow-h");
+          this.$('.mask-nav').toggleClass("settings-mask-black");
       },
       toggleSettingsMenu:function(){
           this.$('.settings-nav').toggleClass("settings-nav-hide");
           this.$('.settings-nav').toggleClass("settings-nav-show");
           this.$('.mask-nav').toggleClass("settings-mask-black");
-
       },
 
       self_service: function(){
@@ -324,9 +321,23 @@ define(['NavView',getViewTemplatePath('MyProfile'),'UItreeMenu','UserCenterInfoM
     },
 
     onShow: function () {
+                    this.$('.mask-nav').removeClass("settings-mask-black");
                     userCenterInfoModel.execute(
                         function(data) {
-                            $("#basic_info_wrap").html(_.template(this.els.basicInfo_tpl.html())({'basic_infoData':data.data.menu_info}));
+                            var BasicInfoData = [],content,title,extra,code;
+                            _.each(data.data.menu_info,function(value){
+                                BasicInfoData.push(
+                                    UserCenterInfoModel.viewBasicInfoModel(
+                                        value.content===undefined?content = '':content = value.content,
+                                        value.title ===undefined?title = '':title = value.title,
+                                        value.extra===undefined?extra = '':extra = value.extra,
+                                        value.code===undefined?code = '':code = value.code
+                                    )
+                                );
+                            })
+                            $("#basic_info_wrap").html(_.template(this.els.basicInfo_tpl.html())({
+                                'basic_infoData':BasicInfoData
+                            }));
                             //window.localStorage.setItem("commercialInsurance", data.menu_info[4].content);
 
                             //如果菜单栏打开高度滚动关闭

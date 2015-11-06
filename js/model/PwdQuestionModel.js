@@ -3,7 +3,7 @@ define(['AbstractModel'],function(AbstractModel){
 
         propertys: function ($super) {
             $super();
-            this.url = "/micro/platform/resetPwdQues";
+            this.url = "portal/platform/resetPwdQues";
             this.param = {};
             this.dataformat = null;
             this.validates = [];

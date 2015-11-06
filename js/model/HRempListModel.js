@@ -3,7 +3,7 @@ define(['AbstractModel'],function(AbstractModel){
 
         propertys: function ($super) {
             $super();
-            this.url = "portal/tm/doLeaveApply";
+            this.url = "portal/hr/getEmployeeList";
             this.param = {};
             this.dataformat = null;
             this.validates = [];
@@ -11,6 +11,10 @@ define(['AbstractModel'],function(AbstractModel){
             this.contentType = 'jsonp';
             this.method = 'GET';
 
+//            this.baseurl = {
+//                domain: '192.168.101.126:8082',
+//                path: ''
+//            };
         },
         buildurl: function ($super) {
             $super();
@@ -23,18 +27,17 @@ define(['AbstractModel'],function(AbstractModel){
                 return this.protocol + '://' + this.baseurl.domain + '/' + this.baseurl.path + (typeof this.url === 'function' ? this.url() : this.url);
         }
     });
+
+    //µ¥ÀýÄ£Ê½
     var modelClass = {};
 
-    modelClass.viewModel = function(type,a_date,s_date,s_time,e_date,e_time,days,reason){
+    modelClass.viewModel = function(id,img,title,content){
         return {
-            type: type,
-            a_date:a_date,
-            s_date:s_date,
-            s_time:s_time,
-            e_date:e_date,
-            e_time:e_time,
-            days:days,
-            reason:reason
+            base_id: id,
+            photo:img,
+            chinese_name:title,
+            mobile_phone:content
+
         }
     };
 

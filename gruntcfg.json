@@ -51,6 +51,8 @@
           "AnnualLeaveModel":"js/model/AnnualLeaveModel",
           "LeaveDaysModel":"js/model/LeaveDaysModel",
           "DoLeaveApplyModel":"js/model/DoLeaveApplyModel",
+          "HRempListModel":"js/model/HRempListModel",
+
           "abstractStorage":"js/mvc/abstractStorage",
           "storage":"js/mvc/storage",
           "AbstractStore":"js/mvc/abstractStore",
@@ -133,6 +135,7 @@
         "AnnualLeaveModel",
         "LeaveDaysModel",
         "DoLeaveApplyModel",
+        "HRempListModel",
         "abstractStorage",
         "storage",
         "AbstractStore",

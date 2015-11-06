@@ -3,7 +3,7 @@ define(['AbstractModel'],function(AbstractModel){
 
         propertys: function ($super) {
             $super();
-            this.url = "micro/platform/getNewsList";
+            this.url = "portal/platform/getNewsList";
             this.param = {};
             this.dataformat = null;
             this.validates = [];
