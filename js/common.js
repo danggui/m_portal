@@ -56,6 +56,7 @@
       'LeaveDaysModel':jsapp.js_path+'model/LeaveDaysModel',
       'DoLeaveApplyModel':jsapp.js_path+'model/DoLeaveApplyModel',
       'HRempListModel':jsapp.js_path+'model/HRempListModel',
+      'HRempDetailModel':jsapp.js_path+'model/HRempDetailModel',
       //store
       'abstractStorage':jsapp.js_path+'mvc/abstractStorage',
       'storage':jsapp.js_path+'mvc/storage',
@@ -84,6 +85,7 @@
       'UIRadioList':jsapp.js_path+'ui/ui.radio.list',
       'UIGroupSelect':jsapp.js_path+'ui/ui.group.select',
       'UIGroupList':jsapp.js_path+'ui/ui.group.list',
+      'UIGroupListEdit':jsapp.js_path+'ui/ui.group.list.edit',
       'UISwitch':jsapp.js_path+'ui/ui.switch',
       'UITab':jsapp.js_path+'ui/ui.tab',
       'UISlide':jsapp.js_path+'ui/ui.slide',

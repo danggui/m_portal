@@ -69,7 +69,7 @@ define(['View',getViewTemplatePath('Emp_List'),'UIToast','UIScroll','NewsListMod
                 $(e.currentTarget).removeClass('cur');
             },
             'click .newsList':function(e){
-                this.forward('News_Detail&'+e.currentTarget.attributes["news-id"].value);
+                this.forward('emp_Detail&'+e.currentTarget.attributes["emp-id"].value);
             },
             'click #apply_leave': function(){
                 this.forward('MyBalance_apply');

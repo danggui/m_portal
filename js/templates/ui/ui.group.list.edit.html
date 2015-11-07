@@ -1,0 +1,25 @@
+<ul class="ctui-itmes">
+    <script type="text/template" id="outline_info_tpl">
+        <li data-groupindex="<%= i %>" class="ctui-arrow-open">
+            <div class="ctui-t">
+                <span class="label" id="myinfo-sub-title">基本信息</span>
+                <i class="icon-btn ct-ui-arrow"></i>
+            </div>
+            <ul class="form-item-list form-group-nospacing padding-li">
+                <%for(var i = 0, len = data.length; i < len; i++) { %>
+                <% if(data[i].editable){ %>
+                <li id="<%=data[i].code%>" class="form-item-li myInfo-edit-detail" style="padding: 10px" data-title="<%=data[i].title%>" data-id="<%=data[i].code%>">
+                    <img src="./images/icons/right_arrow.png" width="10px" height="15px" style="float: right;margin:3px 0 3px 10px;">
+                    <% }else{ %>
+                <li class="form-item-li" style="padding: 10px">
+                    <% }%>
+                    <span class="label" style="width: 35%;"><b style="color: black"><%=data[i].title%></b></span>
+                    <div id="<%=data[i].code+'_value'%>" class="pull-right" style="width: 55%;display: block;word-wrap: break-word;word-break: normal;text-align: right">
+                        <%=data[i].value%>
+                    </div>
+                </li>
+                <%}%>
+            </ul>
+        </li>
+    </script>
+</ul>
